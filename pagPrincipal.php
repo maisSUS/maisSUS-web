@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="css/pagPrincipal.css">
   <!-- Bibliotecas de ícones -->
   <link rel='stylesheet' href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css'>
-  <link rel="stylesheet" href="https://kit.fontawesome.com/367278d2a4.css" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://kit.fontawesome.com/367278d2a4.css" crossorigin="anonymous"> 
 </head>
 
 <body>
