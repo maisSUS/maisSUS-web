@@ -35,9 +35,9 @@
                     <h1>Faça seu login</h1>
                 </div>
                 <!-- Texto para inserir CPF ou Cartão do SUS -->
-                <div id="txtUser" class="navtxt-text">CPF ou Cartão do SUS</div>
-                <!-- Campo de entrada para o CPF ou Cartão do SUS -->
-                <div id="inUser" class="navtxt-text"><input type="text" id="inID" class="circle"></div>
+                <div id="txtUser" class="navtxt-text">CPF</div>
+                <!-- Campo de entrada para o CPF -->
+                <div id="inUser" class="navtxt-text"><input type="text" id="inID" class="circle" placeholder="123.456.789-00"></div>
                 <!-- Texto para inserir senha -->
                 <div id="txtPassword" class="navtxt-text">Senha</div>
                 <!-- Campo de entrada para a senha -->
