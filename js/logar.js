@@ -18,7 +18,7 @@ function entrar() {
         inSenha.focus();
     } else {
         // Verificação de usuário e senha
-        if (inNome.value != "ochicoin" || inSenha.value != "lance") {
+        if (inNome.value != "ochicoin" || inSenha.value != "EuTentei") {
             alert("Usuário ou Senha foram digitados errado!")
         } else {
             // Redireciona para a página principal se os dados de login estiverem corretos
