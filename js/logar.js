@@ -8,6 +8,7 @@ function entrar() {
     // Obtenção dos valores dos campos de login
     var id = inNome.value;
     var senha = inSenha.value;
+    window.location.href = "pagPrincipal.php";
     // Verificações de preenchimento dos campos
     /*if (inNome.value == "") {
         alert("O campo 'CPF ou Cartão do SUS' não foi preenchido!");
