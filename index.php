@@ -45,7 +45,7 @@
                     <input type="password" id="inSenha" class="circle">
                     <!-- Ícone de olho para mostrar/esconder a senha -->
                     <img src="https://cdn0.iconfinder.com/data/icons/ui-icons-pack/100/ui-icon-pack-14-512.png"
-                        id="olho" class="olho" title="mostrar senha" alt="mostrar Senha">
+                        id="olho" class="olho" title="mostrar senha" alt="mostrar Senha" tabindex="0">
                 </div>
                 <!-- Botão para entrar -->
                 <div id="btnEntrar" class="navtxt-button"><input type="button" value="Entrar" id="btEntrar"

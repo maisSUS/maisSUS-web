@@ -64,7 +64,7 @@
 
             <div class="botoes">
                 <button class="btnfinais" name="btnvoltar" onclick="history.back()">Voltar</button>
-                <button class="btnfinais" name="btnprosseguir"><a href="agendaHorario.php">Continuar</a></button>
+                <a class="btnfinais" name="btnprosseguir" href="agendaHorario.php">Continuar</a>
             </div>
         </div>
     </section>
