@@ -69,7 +69,7 @@ i{
 }
 
 .unidades {
-    display: flex;
+    display: flex; 
     flex-wrap: wrap;
     justify-content: center;
     width: auto;
@@ -88,6 +88,7 @@ i{
 }
 
 .UBS div {
+    
     margin-right: 3em;
 }
 
