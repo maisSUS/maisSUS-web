@@ -8,9 +8,8 @@ function entrar() {
     // Obtenção dos valores dos campos de login
     var id = inNome.value;
     var senha = inSenha.value;
-
     // Verificações de preenchimento dos campos
-    if (inNome.value == "") {
+    /*if (inNome.value == "") {
         alert("O campo 'CPF ou Cartão do SUS' não foi preenchido!");
         inNome.focus();
     } else if (inSenha.value == "") {
@@ -24,9 +23,8 @@ function entrar() {
             // Redireciona para a página principal se os dados de login estiverem corretos
             window.location.href = "pagPrincipal.php";
         }
-    }
+    }*/
 }
-
 // Adiciona o evento de clique ao botão de entrar
 btEntrar.addEventListener("click", entrar);
 
