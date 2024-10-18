@@ -46,7 +46,7 @@
                     <p>Localização R. parara</p>   
                 </div>
                 <!-- Botão com Link para outra pagina -->
-                <button><a href="infoUBS.php">Detalhes</a></button>
+                <a href="infoUBS.php">Detalhes</a>
             </div>
 
             <div class="UBS">

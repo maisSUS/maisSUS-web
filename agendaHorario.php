@@ -6,7 +6,8 @@
     <title>Horário e data</title>
     <link rel="icon" href="img/serra.png">
     <link rel="stylesheet" href="css/navBar.css">
-    <link rel="stylesheet" href="css/agendaHorario.css"><link rel="stylesheet" href= "https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+    <link rel="stylesheet" href="css/agendaHorario.css">
+    <link rel="stylesheet" href= "https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
     <link rel="stylesheet" href="css/calendario.css">
     <script src="js/calendario.js" defer></script>
     <script src="js/agendarHorario.js" defer></script>
@@ -42,12 +43,12 @@
                 <div class="calendario">
                     <label class="item" for="id">1. Escolha uma data:</label>
 
-                    <div class="calendar-container">
+                    <div class="calendar-container" tabindex="0">
                         <header class="calendar-header">
                             <p class="calendar-current-date"></p>
                             <div class="calendar-navigation">
-                                <span id="calendar-prev" class="material-symbols-rounded">chevron_left</span>
-                                <span id="calendar-next" class="material-symbols-rounded">chevron_right</span>
+                                <span id="calendar-prev" class="material-symbols-rounded" tabindex="0">chevron_left</span>
+                                <span id="calendar-next" class="material-symbols-rounded" tabindex="0">chevron_right</span>
                             </div>
                         </header>
                 
@@ -70,24 +71,24 @@
                 <div class="escolheHora">
                     <label class="item" for="id">2. Escolha um horário:</label>
                     <div id="horarios">
-                        <div class="item-EscolheHora">08:00</div>
-                        <div class="item-EscolheHora">08:20</div>
-                        <div class="item-EscolheHora">08:40</div>
-                        <div class="item-EscolheHora">09:00</div>
-                        <div class="item-EscolheHora">09:20</div>
-                        <div class="item-EscolheHora">09:40</div>
-                        <div class="item-EscolheHora">10:00</div>
-                        <div class="item-EscolheHora">10:20</div>
-                        <div class="item-EscolheHora">10:40</div>
-                        <div class="item-EscolheHora">11:00</div>
-                        <div class="item-EscolheHora">11:20</div>
-                        <div class="item-EscolheHora">11:40</div>
-                        <div class="item-EscolheHora">12:00</div>
-                        <div class="item-EscolheHora">12:20</div>
-                        <div class="item-EscolheHora">12:40</div>
-                        <div class="item-EscolheHora">13:00</div>
-                        <div class="item-EscolheHora">13:20</div>
-                        <div class="item-EscolheHora">13:40</div>
+                        <div class="item-EscolheHora" tabindex="0">08:00</div>
+                        <div class="item-EscolheHora" tabindex="0">08:20</div>
+                        <div class="item-EscolheHora" tabindex="0">08:40</div>
+                        <div class="item-EscolheHora" tabindex="0">09:00</div>
+                        <div class="item-EscolheHora" tabindex="0">09:20</div>
+                        <div class="item-EscolheHora" tabindex="0">09:40</div>
+                        <div class="item-EscolheHora" tabindex="0">10:00</div>
+                        <div class="item-EscolheHora" tabindex="0">10:20</div>
+                        <div class="item-EscolheHora" tabindex="0">10:40</div>
+                        <div class="item-EscolheHora" tabindex="0">11:00</div>
+                        <div class="item-EscolheHora" tabindex="0">11:20</div>
+                        <div class="item-EscolheHora" tabindex="0">11:40</div>
+                        <div class="item-EscolheHora" tabindex="0">12:00</div>
+                        <div class="item-EscolheHora" tabindex="0">12:20</div>
+                        <div class="item-EscolheHora" tabindex="0">12:40</div>
+                        <div class="item-EscolheHora" tabindex="0">13:00</div>
+                        <div class="item-EscolheHora" tabindex="0">13:20</div>
+                        <div class="item-EscolheHora" tabindex="0">13:40</div>
                 
                     </div>
                 </div>
