@@ -55,7 +55,7 @@
                     <h3>UBS Jacaraipe</h3>
                     <p>Localização R. parara</p>   
                 </div>
-                <button><a href="infoUBS.php">Detalhes</a></button>
+                <a href="infoUBS.php">Detalhes</a>
             </div>
 
             <div class="UBS">
@@ -64,7 +64,7 @@
                     <h3>UBS Nova Almeida</h3>
                     <p>Localização R. parara</p>   
                 </div>
-                <button><a href="infoUBS.php">Detalhes</a></button>
+                <a href="infoUBS.php">Detalhes</a>
             </div>
 
             <div class="UBS">
@@ -73,7 +73,7 @@
                     <h3>UBS P. Res. Laranjeiras</h3>
                     <p>Localização R. parara</p>   
                 </div>
-                <button><a href="infoUBS.php">Detalhes</a></button>
+                <a href="infoUBS.php">Detalhes</a>
             </div>
 
             <div class="UBS">
@@ -82,7 +82,7 @@
                     <h3>UBS Novo Horizonte</h3>
                     <p>Localização R. parara</p>   
                 </div>
-                <button><a href="infoUBS.php">Detalhes</a></button>
+                <a href="infoUBS.php">Detalhes</a>
             </div>
 
             <div class="UBS">
@@ -91,7 +91,7 @@
                     <h3>UBS Lorem Ipsum</h3>
                     <p>Localização R. parara</p>   
                 </div>
-                <button><a href="infoUBS.php">Detalhes</a></button>
+                <a href="infoUBS.php">Detalhes</a>
             </div>
         </div>
     </section>

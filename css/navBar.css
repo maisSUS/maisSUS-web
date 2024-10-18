@@ -10,7 +10,7 @@
 
 /* Configurações da NavBar */
 .nav{
-    width: auto;
+    width:auto;
     background-color: #2d6157;
     padding: 1em;
     display: flex;

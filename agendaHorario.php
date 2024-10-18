@@ -96,7 +96,7 @@
             <!-- botoes de voltar e prosseguir -->
             <div class="botoes">
                 <button class="btnfinais" name="btnvoltar" onclick="history.back()">Voltar</button>
-                <a href="fimAgendamento.php" class="btnfinais" name="btnprosseguir">Finalizar agendamento</a>
+                <a href="fimAgendamento.php" class="btnfinais" name="btnprosseguir">Continuar</a>
             </div>
         </div>
         

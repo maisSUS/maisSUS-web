@@ -43,31 +43,31 @@
                     <i class='bx bx-injection'></i>
                     <p>Hepatite A</p>
                     <!-- Botão que leva a uma pagina com as informações dessa vacinas -->
-                    <button><a href="infoVac.php">Detalhes</a></button>
+                    <a href="infoVac.php">Detalhes</a>
                 </div>
 
                 <div class="vacina">
                     <i class='bx bx-injection'></i>
                     <p>Hepatite B</p>
-                    <button><a href="infoVac.php">Detalhes</a></button>
+                    <a href="infoVac.php">Detalhes</a>
                 </div>
 
                 <div class="vacina">
                     <i class='bx bx-injection'></i>
                     <p>HPV</p>
-                    <button><a href="infoVac.php">Detalhes</a></button>
+                    <a href="infoVac.php">Detalhes</a>
                 </div>
 
                 <div class="vacina">
                     <i class='bx bx-injection'></i>
                     <p>Coronavírus</p>
-                    <button><a href="infoVac.php">Detalhes</a></button>
+                    <a href="infoVac.php">Detalhes</a>
                 </div>
 
                 <div class="vacina">
                     <i class='bx bx-injection'></i>
                     <p>Febre amarela</p>
-                    <button><a href="infoVac.php">Detalhes</a></button>
+                    <a href="infoVac.php">Detalhes</a>
                 </div>
             </div>
         </div>

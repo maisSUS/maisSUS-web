@@ -51,21 +51,17 @@ i{
     font-size: 1.2em;
 }
 
-.vacina button {
+.vacina a {
     color: white;
-    padding: 0.5em 0.8em;
+    padding: 0.5em 0.5em;
     border: none;
     border-radius: 10px;
-    background-color: #3C827A;
-}
-
-.vacina button a{
-    color: white;
+    background-color: #3c827a;
     font-size: 1.2em;
 }
 
-.vacina button:hover{
-    background-color: #577b74;
+.vacina a:hover{
+    background-color: #496b65;
 }
 
 .unidades {
@@ -88,20 +84,15 @@ i{
 }
 
 .UBS div {
-    
     margin-right: 3em;
 }
 
-.UBS button {
+.UBS a {
     color: white;
-    padding: 0.5em 0.8em;
+    padding: 0.4em 0.5em;
     border: none;
     border-radius: 10px;
     background-color: #3C827A;
-}
-
-.UBS button a{
-    color: white;
     font-size: 1.2em;
 }
 
