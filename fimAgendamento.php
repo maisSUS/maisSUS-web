@@ -10,7 +10,7 @@
 </head>
 <body>
     <header>
-        <div class="nav">
+        <div class="nav"> 
             <div id="logo"><a href="pagPrincipal.php">+SUS</a></div>
 
             <ul class="navlist">
@@ -34,8 +34,13 @@
     <h1>Confira seus dados:</h1>
     <section>
         <div class="conteudo">
-            <h1>Agendamento concluído com sucesso!</h1>
-            <a class="botaoPadrao" href="pagPrincipal.php">OK</a>
+            <h1>DENTISTA</h1>
+            <p>Paciente: </p>
+            <p>Profissional: </p>
+            <p>Data da consulta: </p>
+            <p>Horário: </p>
+            <p>Unidade: </p>
+            <a class="botaoPadrao" href="pagPrincipal.php">Finalizar Agendamento</a>
         </div>
     </section>
 </body>
