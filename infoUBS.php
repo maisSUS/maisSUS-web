@@ -46,9 +46,7 @@
             <p>Domingo: Fechado</p>
           </div>
         <!-- Botão para voltar na pagina anterior -->
-          <button class="btnVoltar">
-            <a href="ubs.php">Voltar</a>
-          </button>
+          <a class="btnVoltar" href="ubs.php">Voltar</a>
         </div>
     </section>
 
