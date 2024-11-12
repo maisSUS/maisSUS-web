@@ -7,6 +7,7 @@
     <link rel="icon" href="img/serra.png">
     <link rel="stylesheet" href="css/navBar.css">
     <link rel="stylesheet" href="css/agendaExame.css">
+    <link rel="stylesheet" href="css/cancelamento.css">
 </head>
 <body>
     <header>
@@ -64,7 +65,24 @@
 
             <div class="botoes">
                 <button class="btnfinais" name="btnvoltar" onclick="history.back()">Voltar</button>
-                <a class="btnfinais" name="btnprosseguir" href="agendaHorario.php">Continuar</a>
+                <!--<a class="btnfinais" name="btnprosseguir" href="agendaHorario.php">Continuar</a>-->
+                <input type="button" value="Continuar" class="btnfinais" id="btnprosseguir" onclick="document.getElementById('id01').style.display='block'">
+                <div id="id01" class="modal">
+                    <form class="modal-content">
+                        <div class="container">
+                            <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">×</span>
+                            <h2>ATENÇÃO!</h2>
+                            <p>Para agendar essa consulta é necessário ter o</br> encaminhamento do clínico geral. Se já possui,</br> siga em frente. Se não possui, procure um clínico</br> geral antes.</p>
+                            
+                        </div>
+                    </form>
+                </div>
+                <script>
+                    function prosseguir() {
+                        window.location.href = "";
+                    }
+                    btncontinuar.addEventListener("click", continuar);
+                </script>
             </div>
         </div>
     </section>

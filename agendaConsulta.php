@@ -80,7 +80,14 @@
             <!-- botoes para prosseguir e voltar  -->
             <div class="botoes">
                 <button class="btnfinais" id="btnvoltar" onclick="history.back()">Voltar</button>
-                <a href="agendaHorario.php" class="btnfinais" id="btncontinuar">Continuar</a>
+                <input type="button" value="Continuar" class="btnfinais" id="btncontinuar">
+                <script>
+                    function continuar() {
+                        window.location.href = "agendaHorario.php";
+                    }
+                    btncontinuar.addEventListener("click", continuar);
+                </script>
+                    
             </div>
         </div>
     </section>

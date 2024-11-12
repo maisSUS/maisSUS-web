@@ -60,3 +60,7 @@ h1{
     left: 19.5%;
     transform: translateY(-15%);
 }
+/* Decora a section */
+section{
+    padding: 0em 2em;
+}
