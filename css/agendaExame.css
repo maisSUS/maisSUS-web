@@ -64,3 +64,32 @@ h1{
 section{
     padding: 0em 2em;
 }
+.avancarbtn, .voltarbtn {
+    float: left;
+    width: 25%;
+    height: 4.5vh;
+    border: none;
+    border-radius: 10px;
+    font-size:larger;
+}
+.avancarbtn {
+    margin-left: 3em;
+    background-color: #3C827A;
+    color: rgb(255, 247, 247);
+    width: 15vw;
+}
+.voltarbtn {
+    background-color: #3C827A;
+    color: white;
+    width: 15vw;
+}
+.centralizar {
+    margin-top: 1em;
+}
+i{
+    font-size: 5.5em;
+}
+#aviso{
+    font-size: 2em;
+    margin-bottom: 0.5em;
+}
