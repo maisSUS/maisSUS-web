@@ -4,13 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/acessibilidadeBarra.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="js/acessibilidadeBarra.js" defer></script> 
     <title>Document</title>
 </head>
 <body>
 <header>
-    <?php
-        include 'acessibilidadeBarra.php';
-    ?>
         <!--Menu-->
         <div class="nav">
             <div id="logo"><a href="pagPrincipal.php">+SUS</a></div>
@@ -26,6 +27,10 @@
                 </li>
             </ul>
         </div>
+
+        <button class="decreaseFont">A-</button>
+        <button class="increaseFont">A+</button>
+        <button class="blackBg">A</button>
+        <button class="yellowBg">A</button>
+
     </header>
-</body>
-</html>
