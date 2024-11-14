@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="css/navBar.css">
     <link rel="stylesheet" href="css/agendaExame.css">
     <link rel="stylesheet" href="css/cancelamento.css">
-</head>
 <body>
     <header>
         <!-- menu  -->
@@ -73,15 +72,22 @@
                             <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">×</span>
                             <h2>ATENÇÃO!</h2>
                             <p>Para agendar essa consulta é necessário ter o</br> encaminhamento do clínico geral. Se já possui,</br> siga em frente. Se não possui, procure um clínico</br> geral antes.</p>
-                            
+                            <div class="centralizar">
+                                <div class="clearfix">
+                                    <button type="button" class="deletebtn" onclick="document.getElementById('id01').style.display='none'">Voltar</button>
+                                    <button type="button" class="cancelbtn" id="avancarbtn">Seguir em frente</button>
+                                </div>
+                            </div>
                         </div>
                     </form>
                 </div>
                 <script>
-                    function prosseguir() {
-                        window.location.href = "";
+                    var avancar = document.getElementById("avancarbtn");
+                    
+                    function confirmar() {
+                        window.location.href = "agendaHorario.php";
                     }
-                    btncontinuar.addEventListener("click", continuar);
+                    avancar.addEventListener("click", confirmar);
                 </script>
             </div>
         </div>
