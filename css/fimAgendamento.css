@@ -26,9 +26,28 @@ section{
 }
 
 h1{
-    margin: 0 auto;
+    margin: 0;
     min-width: 50vw;
     max-width: 60vw;
     font-weight: bold;
     font-size: 1em;
 }
+.botao, .voltarbtn{
+    padding: 0.6em 0;
+    width: 15vw;
+    font-size: 1rem;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    background-color: #3C827A;
+}
+.botao{ 
+    margin-left: 3em;
+}
+.centralizar {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1em;
+  }

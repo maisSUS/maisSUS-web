@@ -40,7 +40,10 @@
             <p>Data da consulta: </p>
             <p>Horário: </p>
             <p>Unidade: </p>
-            <a class="botaoPadrao" href="pagPrincipal.php">Finalizar Agendamento</a>
+            <div class="centralizar">
+                <button type="button" class="voltarbtn" onclick="history.back()">Voltar</button>
+                <a class="botao" href="pagPrincipal.php">Finalizar Agendamento</a>
+            </div>
         </div>
     </section>
 </body>
