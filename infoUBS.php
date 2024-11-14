@@ -35,6 +35,7 @@
           <div>
             <h1>UBS Feu Rosa</h1><br>
             <p>Localização: Feu rosa, Serra</p>
+            <p>Contato: (27) 99123-4567</p>
             <br>
 
             <h2>Horario de funcionamento:</h2>

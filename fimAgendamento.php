@@ -31,8 +31,8 @@
 
         </div>
     </header>
-    <h1>Confira seus dados:</h1>
     <section>
+        <h1>Confira seus dados:</h1>
         <div class="conteudo">
             <h1>DENTISTA</h1>
             <p>Paciente: </p>
