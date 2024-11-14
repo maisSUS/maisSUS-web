@@ -9,7 +9,7 @@
 <body>
 <header>
     <?php
-        include 'acessibilidade.php';
+        include 'acessibilidadeBarra.php';
     ?>
         <!--Menu-->
         <div class="nav">
