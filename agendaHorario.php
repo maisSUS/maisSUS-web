@@ -35,8 +35,8 @@
             
         </div>
     </header>
-    <h1>Agendamento de consulta</h1>
     <section>
+        <h1>Agendamento de consulta</h1>
         <div class="conteudo">
             <div class="agendamento">
                 <!-- calendario -->
