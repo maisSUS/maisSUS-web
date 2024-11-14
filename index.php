@@ -39,7 +39,7 @@
                 <!-- Campo de entrada para o CPF -->
                 <div id="inUser" class="navtxt-text"><input type="text" id="inID" class="circle" placeholder="123.456.789-00"></div>
                 <!-- Texto para inserir senha -->
-                <div id="txtPassword" class="navtxt-text"><label for="inSenha   ">Senha</label></div>
+                <div id="txtPassword" class="navtxt-text"><label for="inSenha">Senha</label></div>
                 <!-- Campo de entrada para a senha -->
                 <div id="inPassword" class="navtxt-text">
                     <input type="password" id="inSenha" class="circle">
