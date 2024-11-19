@@ -31,5 +31,6 @@
         <button class="increaseFont">A+</button>
         <button class="blackBg">A</button>
         <button class="yellowBg">A</button>
+        <button class="dislexia">A</button>
 
     </header>
