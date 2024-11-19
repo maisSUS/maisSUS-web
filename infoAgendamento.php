@@ -11,25 +11,9 @@
     <script src="js/cancelamento.js"></script>
 </head>
 <body>
-    <header>
-        <div class="nav"><!--Menu-->
-            <div id="logo"><a href="pagPrincipal.php">+SUS</a></div>
-            <ul class="navlist">
-                <li class="nav-item">
-                    <a class="nav-link active" href="pagPrincipal.php">Página Principal</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active" href="meusAgendamentos.php">Meus Agendamentos</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active" href="perfil.php">Perfil</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active" href="index.php">Sair</a>
-                </li>
-            </ul>
-        </div>
-    </header>
+    <?php
+        include 'header.php';
+    ?>
     <h1 class="o1">Informações do agendamento</h1>
     <section>
         

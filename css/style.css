@@ -3,8 +3,9 @@ a{
 }
 
 i{
-    font-size: 2em;
-    color:#226258;
+    font-size: 1.5em;
+    color:black;
+    font-weight: bolder;
 }
 
 #seta, #setaUbs{
@@ -12,11 +13,9 @@ i{
     margin-top: 1.5em;
     margin-left: 1em;
     margin-right: 1em;
-    color: rgba(0, 0, 0, 0.624);
     border-right: 20px;
 }
-
-#seta p{
+#voltarVac{
     position: relative;
     left: 2em;
     bottom: 1em;
@@ -30,8 +29,9 @@ i{
     color: black;
 }
 
-#seta:hover, #setaUbs:hover{
-    color: black;
+#seta:hover, #setaUbs:hover, #voltarVac:hover{
+    color: #226258;
+    cursor: pointer;
 }
 
 .vacina {
@@ -48,7 +48,7 @@ i{
 
 .vacina p {
     margin: 0em 2em;
-    font-size: 1.2em;
+    font-size: 1.3em;
 }
 
 .vacina a {
@@ -67,8 +67,8 @@ i{
 .unidades {
     display: flex; 
     flex-wrap: wrap;
-    justify-content: center;
-    width: auto;
+    flex-direction: row;
+    justify-content: space-evenly;
 }
 
 .UBS {
@@ -148,4 +148,7 @@ section > div{
 
 .btnVoltar:hover{
     background-color: #577b74;
+}
+#container {
+    
 }

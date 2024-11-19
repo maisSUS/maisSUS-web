@@ -9,29 +9,11 @@
     <link rel="stylesheet" href="css/agendaConsulta.css">
 </head>
 <body>
-    <header>
-        <!-- menu -->
-        <div class="nav">
-            <div id="logo"><a href="pagPrincipal.php">+SUS</a></div>
-            <ul class="navlist">
-                <li class="nav-item">
-                    <a class="nav-link active" href="pagPrincipal.php">Página Principal</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active" href="meusAgendamentos.php">Meus Agendamentos</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active" href="perfil.php">Perfil</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active" href="index.php">Sair</a>
-                </li>
-            </ul>
-
-        </div>
-    </header>
+    <?php
+        include 'header.php';
+    ?>
     <section>
-        <h1>Agendamento de consulta</h1>
+        <h1>Agendamento de Consulta</h1>
         <div class="conteudo">    
             
             <!-- lista de unidades -->

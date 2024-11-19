@@ -54,15 +54,16 @@ select {
 }
 
 h1{
-    left: 16em;
-    text-align: center;
-    position: absolute;
-    left: 19.5%;
-    transform: translateY(-15%);
+    margin: 0 auto;
+    min-width: 50vw;
+    max-width: 60vw;
+    font-weight: bold;
+    font-size: 1.5em;
 }
 /* Decora a section */
 section{
     padding: 0em 2em;
+    margin-top: 2em;
 }
 .avancarbtn, .voltarbtn {
     float: left;
