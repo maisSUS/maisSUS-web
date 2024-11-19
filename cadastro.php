@@ -30,43 +30,30 @@
         <div class="inputs">
             <!-- Lado esquerdo dos campos de entrada -->
             <div id="nav-l">
-                <!-- Divisões para os campos de nome e sobrenome -->
-                <div id="l-row1">
-                    <div id="nome">
-                        <span>Nome *</span><br>
-                        <!-- Campo de entrada para o nome -->
-                        <input type="text" placeholder="Nome" id="inNome" class="circle" required>
-                    </div>
-                    <div id="sobrenome">
-                        <span>Sobrenome *</span><br>
-                        <!-- Campo de entrada para o sobrenome -->
-                        <input type="text" placeholder="Sobrenome" id="inSobrenome" class="circle">
-                    </div>
-                </div>
+                <label for="inNome">Nome completo*</label><br>
+                <!-- Campo de entrada para o nome -->
+                <p><input type="text" placeholder="Nome" id="inNome" class="circle" required></p>
                 <!-- Campo de entrada para o CPF -->
-                <span>CPF *</span>
+                <label for="inCpf">CPF *</label><br>
                 <p><input type="text" placeholder="123.456.789-00" id="inCpf" class="circle"></p>
                 <!-- Campo de entrada para o Cartão do SUS -->
-                <span>Cartão do SUS *</span>
+                <label for="inSus">Cartão do SUS *</label><br>
                 <p><input type="text" placeholder="123-4567-8912-3456" id="inSus" class="circle"></p>
                 <!-- Campo de entrada para o telefone -->
-                <span>Telefone *</span>
+                <label for="inTel">Telefone *</label><br>
                 <p><input type="text" placeholder="(DDD) 12345-6789" id="inTel" class="circle"></p>
             </div>
 
             <!-- Lado direito dos campos de entrada -->
             <div id="nav-r">
                 <!-- Campo de entrada para o email -->
-                <span>E-mail *</span>
+                <label for="inEmail">E-mail *</label><br>
                 <p><input type="email" placeholder="nome@dominio.com" id="inEmail" class="circle"></p>
-                <!-- Campo de confirmação de email -->
-                <span>Confirmar e-mail *</span>
-                <p><input type="email" placeholder="nome@dominio.com" id="inCfmEmail" class="circle"></p>
                 <!-- Campo de entrada para a senha -->
-                <span>Senha *</span>
+                <label for="inPssw">Senha *</label><br>
                 <p><input type="password" placeholder="***********" id="inPssw" class="circle"></p>
                 <!-- Campo de confirmação de senha -->
-                <span>Confirmar senha *</span>
+                <label for="inCfmPssw">Confirmar senha *</label><br>
                 <p><input type="password" placeholder="***********" id="inCfmPssw" class="circle"></p>
             </div>
         </div>
