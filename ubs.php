@@ -18,62 +18,65 @@
     ?>
 
     <section>
-        <i class='bx bx-arrow-back' id="setaUbs" onclick="Principal()"><p>Unidades básicas de saúde</p></i>
+        <i class='bx bx-arrow-back' id="setaUbs" onclick="Principal()"><p id="voltarVac">Unidades básicas de saúde</p></i>
         <!-- Lista de UBS -->
         <div class="unidades">
-            <div class="UBS">
-                <div>
-                    <i class="fa-regular fa-hospital"></i>
-                    <h3>UBS Feu Rosa</h3>
-                    <p>Localização R. parara</p>   
+            <div>
+                <div class="UBS">
+                    <div>
+                        <i class="fa-regular fa-hospital"></i>
+                        <h3>UBS Feu Rosa</h3>
+                        <p>Localização R. parara</p>   
+                    </div>
+                    <!-- Botão com Link para outra pagina -->
+                    <a href="infoUBS.php">Detalhes</a>
                 </div>
-                <!-- Botão com Link para outra pagina -->
-                <a href="infoUBS.php">Detalhes</a>
-            </div>
 
-            <div class="UBS">
-                <div>
-                    <i class="fa-regular fa-hospital"></i>
-                    <h3>UBS Jacaraipe</h3>
-                    <p>Localização R. parara</p>   
+                <div class="UBS">
+                    <div>
+                        <i class="fa-regular fa-hospital"></i>
+                        <h3>UBS Jacaraipe</h3>
+                        <p>Localização R. parara</p>   
+                    </div>
+                    <a href="infoUBS.php">Detalhes</a>
                 </div>
-                <a href="infoUBS.php">Detalhes</a>
-            </div>
 
-            <div class="UBS">
-                <div>
-                    <i class="fa-regular fa-hospital"></i>
-                    <h3>UBS Nova Almeida</h3>
-                    <p>Localização R. parara</p>   
+                <div class="UBS">
+                    <div>
+                        <i class="fa-regular fa-hospital"></i>
+                        <h3>UBS Nova Almeida</h3>
+                        <p>Localização R. parara</p>   
+                    </div>
+                    <a href="infoUBS.php">Detalhes</a>
                 </div>
-                <a href="infoUBS.php">Detalhes</a>
             </div>
-
-            <div class="UBS">
-                <div>
-                    <i class="fa-regular fa-hospital"></i>
-                    <h3>UBS P. Res. Laranjeiras</h3>
-                    <p>Localização R. parara</p>   
+            <div>
+                <div class="UBS">
+                    <div>
+                        <i class="fa-regular fa-hospital"></i>
+                        <h3>UBS P. Res. Laranjeiras</h3>
+                        <p>Localização R. parara</p>   
+                    </div>
+                    <a href="infoUBS.php">Detalhes</a>
                 </div>
-                <a href="infoUBS.php">Detalhes</a>
-            </div>
 
-            <div class="UBS">
-                <div>
-                    <i class="fa-regular fa-hospital"></i>
-                    <h3>UBS Novo Horizonte</h3>
-                    <p>Localização R. parara</p>   
+                <div class="UBS">
+                    <div>
+                        <i class="fa-regular fa-hospital"></i>
+                        <h3>UBS Novo Horizonte</h3>
+                        <p>Localização R. parara</p>   
+                    </div>
+                    <a href="infoUBS.php">Detalhes</a>
                 </div>
-                <a href="infoUBS.php">Detalhes</a>
-            </div>
 
-            <div class="UBS">
-                <div>
-                    <i class="fa-regular fa-hospital"></i>
-                    <h3>UBS Lorem Ipsum</h3>
-                    <p>Localização R. parara</p>   
+                <div class="UBS">
+                    <div>
+                        <i class="fa-regular fa-hospital"></i>
+                        <h3>UBS Lorem Ipsum</h3>
+                        <p>Localização R. parara</p>   
+                    </div>
+                    <a href="infoUBS.php">Detalhes</a>
                 </div>
-                <a href="infoUBS.php">Detalhes</a>
             </div>
         </div>
     </section>

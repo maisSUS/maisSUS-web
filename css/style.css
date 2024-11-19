@@ -7,6 +7,13 @@ i{
     color:black;
     font-weight: bolder;
 }
+.vacina i{
+    color:#226258;
+    font-size: 2.5em;
+}
+.UBS i{
+    color:#226258;
+}
 
 #seta, #setaUbs{
     align-self: baseline;
@@ -36,7 +43,7 @@ i{
 
 .vacina {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     border: none;
     margin-right: 2em;
