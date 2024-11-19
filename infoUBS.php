@@ -9,25 +9,9 @@
   <link rel="stylesheet" href="css/navBar.css">
 </head>
 <body>
-    <header>
-      <div class="nav">
-        <div id="logo"><a href="pagPrincipal.php">+SUS</a></div>
-            <ul class="navlist">
-                <li class="nav-item">
-                    <a class="nav-link active" href="pagPrincipal.php">Página Principal</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active" href="meusAgendamentos.php">Meus Agendamentos</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active" href="perfil.php">Perfil</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active" href="index.php">Sair</a>
-                </li>
-            </ul>
-        </div>
-    </header>
+  <?php
+        include 'header.php';
+  ?>
 <!-- Sessão com as informações da unidade de Feu rosa -->
     <section>
         <div id="hepatite">
