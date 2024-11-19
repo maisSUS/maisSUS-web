@@ -33,8 +33,8 @@
 
         </div>
     </header>
-    <section>     
-        <h1>Agendamento de Exame</h1>
+    <h1>Agendamento de Exame</h1>
+    <section>
         <div class="conteudo">
 
             <!-- lista de unidades disponiveis  -->

@@ -32,9 +32,9 @@
 
         </div>
     </header>
-    
-    <div id="container">
-        <div class="headerVac">
+
+    <section>
+        <div>
             <!-- Botão com evento para voltar a pagina principal -->
             <i class='bx bx-arrow-back' id="seta" onclick="Principal()"><p id="voltarVac">Vacinas</p></i>
         </div>
