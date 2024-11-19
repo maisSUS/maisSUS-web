@@ -11,7 +11,7 @@
 </head>
 <body>
 <header>
-        <!--Menu-->
+        <!--Menu que será usado em diversas páginas-->
         <div class="nav">
             <div id="logo"><a href="pagPrincipal.php">+SUS</a></div>
             <ul class="navlist">
@@ -26,7 +26,7 @@
                 </li>
             </ul>
         </div>
-
+        <!--Botões da barra de acessibilidade-->
         <button class="decreaseFont">A-</button>
         <button class="increaseFont">A+</button>
         <button class="blackBg">A</button>
