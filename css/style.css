@@ -98,7 +98,6 @@ i{
 
 section > div{ 
     display: flex;
-    justify-content: center;
     align-items: center;
 }
 
