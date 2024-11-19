@@ -17,24 +17,9 @@
 </head>
 
 <body>
-  <!-- Cabeçalho da página -->
-  <header>
-    <!-- Barra de navegação -->
-    <div class="nav">
-      <!-- Logo +SUS -->
-      <div id="logo"><a href="pagPrincipal.php">+SUS</a></div>
-      <!-- Lista de links de navegação -->
-      <ul class="navlist">
-        <li class="nav-item">
-          <a class="nav-link active" href="perfil.php">Perfil</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link active" href="index.php">Sair</a>
-        </li>
-      </ul>
-    </div>
-  </header>
-
+    <?php
+        include 'header.php';
+    ?>
   <!-- Corpo da página -->
   <div class="body">
     <!-- Container principal -->
