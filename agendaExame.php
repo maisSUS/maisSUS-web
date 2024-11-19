@@ -11,28 +11,9 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
-    <header>
-        <!-- menu  -->
-        <div class="nav">
-            <div id="logo"><a href="pagPrincipal.php">+SUS</a></div>
-            <ul class="navlist">
-                <li class="nav-item">
-                    <a class="nav-link active" href="pagPrincipal.php">Página Principal</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active" href="meusAgendamentos.php">Meus Agendamentos</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active" href="perfil.php">Perfil</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active" href="index.php">Sair</a>
-                </li>
-            </ul>
-
-
-        </div>
-    </header>
+    <?php
+        include 'header.php';
+    ?>
     <h1>Agendamento de Exame</h1>
     <section>
         <div class="conteudo">
