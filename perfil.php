@@ -54,17 +54,17 @@
                 <!-- Dados pessoais -->
                 <div class="data">
                     <div class="data-left">
-                        <h3 id="nav-subtitles">Nome Completo</h3>
+                        <p id="nav-subtitles">Nome Completo</p>
                         <p id="nav-txt">Francisco Veiga</p>
-                        <h3 id="nav-subtitles">CPF</h3>
+                        <p id="nav-subtitles">CPF</p>
                         <p id="nav-txt">160.616.570-48</p>
-                        <h3 id="nav-subtitles">Cartão Nacional de Saúde</h3>
+                        <p id="nav-subtitles">Cartão Nacional de Saúde</p>
                         <p id="nav-txt">754.891.263.781</p>
                     </div>
                     <div class="data-right">
-                        <h3 id="nav-subtitles">E-mail</h3>
+                        <p id="nav-subtitles">E-mail</p>
                         <p id="nav-txt">eutentei@fuimlk.com.br</p>
-                        <h3 id="nav-subtitles">Telefone</h3>
+                        <p id="nav-subtitles">Telefone</p>
                         <p id="nav-txt">(XX) XXXXX-XXXX</p>
                         <div id="nav-button">
                             <button type="submit" class="green-button" id="altDados">Alterar dados</button>
