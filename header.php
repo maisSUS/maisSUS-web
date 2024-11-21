@@ -10,7 +10,7 @@
     <title>Document</title>
 </head>
 <body>
-<header>
+    <header>
         <!--Menu que será usado em diversas páginas-->
         <div class="nav">
             <div id="logo"><a href="pagPrincipal.php">+SUS</a></div>
