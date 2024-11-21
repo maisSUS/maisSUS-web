@@ -22,6 +22,7 @@
     ?>
   <!-- Corpo da página -->
   <div class="body">
+
     <!-- Container principal -->
     <div class="container">
       <!-- Primeira coluna de links -->
@@ -29,7 +30,7 @@
         <!-- Link para agenda de consulta -->
         <a href="agendaConsulta.php" class="direcionamento">
           <i class='bx bx-calendar-event'></i>
-          <p>Agendar Consultas</p>
+          <p class="pclass">Agendar Consultas</p>
         </a>
 
         <!-- Link para agenda de exame -->

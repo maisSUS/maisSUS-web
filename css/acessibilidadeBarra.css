@@ -1,61 +1,3 @@
-/*html{
-    font-size: 18px;
-  }
-  main{
-    font-size: 1em;
-    max-width: 40em;
-    margin: 1em auto 0;
-  }
-
-  button{
-    background: #e0e0e0;
-    border: solid black 1px;
-    height: 50px;
-    width: 50px;
-    display:inline-block;
-    text-align: center;
-    transition: .3s;
-    font-size: 18px;
-    position: relative;
-    top: -3px;
-  }
- 
-  button:active{
-  -webkit-box-shadow: inset 1px 1px 2px 2px rgba(181, 181, 181, 0.6);
-  box-shadow: inset 1px 1px 2px 2px rgba(181, 181, 181, 0.6);}
-  
-  button.decreaseFont{
-    font-size:14px;
-    top: -4px;
-  }
-  button.increaseFont{
-    font-size: 26px;
-    top: 0px;
-  }
-
-  button.yellowBg{
-    background: yellow;
-  }
-  button.blackBg{
-    background: black;
-    color:white;
-  }
-  .invert{
-    color:white;
-    background:black;
-    a{
-      color: lightblue;
-    }
-  }
-  .contrast{
-    color:black;
-    background:yellow;
-    a{
-      color: blue;
-    }
-  }*/
-
-
 .decreaseFont, .increaseFont, .blackBg, .yellowBg{
   background: #e0e0e0;
   border: solid black 1px;
@@ -68,20 +10,6 @@
   position: relative;
   top: -3px;
 }
-/*
-button:active{
--webkit-box-shadow: inset 1px 1px 2px 2px rgba(181, 181, 181, 0.6);
-box-shadow: inset 1px 1px 2px 2px rgba(181, 181, 181, 0.6);}*/
-
-/*button.decreaseFont{
-  font-size:14px;
-  top: -4px;
-}
-
-button.increaseFont{
-  font-size: 26px;
-  top: 0px;
-}*/
 
 button.yellowBg{
   background: yellow;
@@ -95,15 +23,81 @@ button.blackBg{
 .invert{
   color:white;
   background:black;
+  
+  .nav, footer{
+    background:white;
+    p{
+      color: black;
+    }
+  }
+
+  #logo > a{
+    color: black;
+  }
   a{
-    color: lightblue;
+    color: black;
+  }
+
+  .container > div > a{
+    background:black;
+    p{
+      color: white;
+    }
+    i{
+      color:white;
+    }
+  }
+
+  .vacina > a{
+    background-color: white;
+  }
+
+  .vacina > i{
+    color: white;
   }
 }
 
 .contrast{
   color:black;
   background:yellow;
+  .nav, footer{
+    background:black;
+    p{
+      color: yellow;
+    }
+  }
+
+  #logo > a{
+    color: yellow;
+  }
+
   a{
-    color: blue;
+    color: yellow;
+  }
+
+  .container > div > a{
+    background:black;
+    p{
+      color: yellow;
+    }
+    i{
+      color: yellow;
+    }
+  }
+
+  .vacina > a{
+    background-color: black;
+  }
+
+  .vacina > i{
+    color: black;
   }
 }
+
+/* .tagpcontrast{
+  color: black;
+};
+
+.tagpinvert{
+    color:rgb(255, 255, 255);
+} */
