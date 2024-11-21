@@ -15,7 +15,7 @@
         include 'header.php';
     ?>
     <h1 class="o1">Informações do agendamento</h1>
-    <section>
+    <section id="infoAgenda">
         
         <h1 class="h1" id="especialidade">DENTISTA</h1> <!--Especialidade-->
         <h2 class="h2" id="h2">Consulta</h2><!--Tipo do agendamento-->
@@ -53,7 +53,7 @@
         </div>
 
         <!--Botoes para permitir que o usuario volte a pagina anterior ou cancele a consulta-->
-        <button class="btnVoltar" id="btnVoltar" name="btnvoltar" onclick="history.back()">Voltar</button>
+        <button class="btnVoltar" id="btnvoltar" name="btnvoltar" onclick="history.back()">Voltar</button>
         <button class="btnCancelar" id="btnCancelar" onclick="document.getElementById('id01').style.display='block'">Cancelar</button>
         
     </section>

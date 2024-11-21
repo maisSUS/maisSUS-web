@@ -1,5 +1,6 @@
 .decreaseFont, .increaseFont, .blackBg, .yellowBg, .dislexia{
-  background: #e0e0e0;
+  background: white;
+  color: black;
   border: solid black 1px;
   height: 50px;
   width: 50px;
@@ -20,46 +21,199 @@ button.blackBg{
   color:white;
 }
 
-.invert{
+.dislexia:hover, .increaseFont:hover, .decreaseFont:hover, .blackBg:hover, .yellowBg:hover{
+  background-color: #aaa;
+}
+
+.btnAcessibilidade{
+  display: inline;
+  margin-top: 1em;
+}
+
+/*acionado ao clicar em blackbg*/
+.blackMode{
   color:white;
   background:black;
   
   .nav, footer{
-    background:white;
-    p{
-      color: black;
-    }
-  }
-
-  #logo > a{
-    color: black;
-  }
-  a{
-    color: black;
-  }
-
-  .container > div > a{
     background:black;
     p{
       color: white;
     }
-    i{
-      color:white;
+  }
+
+  i{
+    color: white;
+  }
+
+  footer{
+    border-top: solid 1px white;
+  }
+
+  #logo > a{
+    color: white;
+  }
+
+  header{
+    .nav{
+      border-bottom: solid 1px white;
+    }
+
+    a{
+      color: white;
     }
   }
 
-  .vacina > a{
+  .container > div > a{
+    background:black;
+    border: solid white 1px;
+    p{
+      color: white;
+    }
+  }
+
+  /*pagina de vacina*/
+  #voltarVac, #seta {
+    color: white;
+  }
+  .vacina, .UBS {
+    border: white solid 1px;
+    a{
+      background-color: black;
+    }
+  }
+
+  /*pagina de infoVac*/
+  #infoContainer{
+    border: solid 1px white;
+    background-color: black;
+    h1{
+      color: white;
+    }
+    a{
+      background-color: black;
+      border: solid 1px white;
+    }
+  }
+
+  /*pagina de agendaConsulta*/
+  select {
+    background-color: black;
+    border: white solid 1px;
+    color: white;
+  }
+
+  #btnvoltar, #btncontinuar{
+    background-color: black;
+    color: white;
+    border: white solid 1px;
+  }
+
+  .conteudo{
+    border: white solid 1px;
+  }
+
+  /*pagina de agendaHorario*/
+  .item-EscolheHora{
+    background-color: black;
+    color: white;
+    border: solid white 1px;
+  }
+
+  .selHorario {
+    margin: 0.2em;
+    color: black;
+    padding: 0.5em;
+    border-radius: 10px;
     background-color: white;
   }
 
-  .vacina > i{
-    color: white;
+  .selHorario:hover{
+    background-color: white;
   }
+
+  .calendar-container{
+    border: solid white 1px;
+    background-color: black;
+
+    span{
+      color: white;
+    }
+    
+    li{
+      color: white;
+    }
+
+    .calendar-dates li.inactive {
+      color: #aaa;
+    }
+    
+    .calendar-dates li.active {
+      color: black;
+    }
+        
+    .calendar-dates li.active::before {
+      background-color: white;
+    }
+    
+    .calendar-dates li:not(.active):hover::before {
+      background-color: rgb(172, 172, 172);
+    }
+  }
+
+  /*fimAgendamento*/
+  #btns{
+    background-color: black;
+    color: white;
+    border: solid white 1px;
+  }
+
+  /*meus agendamentos*/
+  .agendamentos{
+    border: solid white 1px;
+  }
+  .btnVerMais, .btnCancelar{
+    background-color: black;
+    color: white;
+    border: white 1px solid;
+  }
+
+  /*infoAgendamento*/
+  #infoAgenda{
+    border: white solid 1px;
+    #especialidade{
+      color: white;
+    }
+  }
+
+  /*perfil*/
+  .content{
+    border: solid white 1px;
+    #h11, #altDados{
+      background-color: black;
+      border: solid white 1px;
+    }
+  }
+
+  /*cadastro*/
+  #btnCadastrar{
+    background-color: black;
+    color: white;
+    border: white solid 1px;
+  }
+
+  #link, #logo{
+    color: white;
+  }  
+  
 }
 
-.contrast{
+/* acionado ao clicar em yellowBg */
+.yellowMode{
+  
   color:black;
   background:yellow;
+
   .nav, footer{
     background:black;
     p{
@@ -75,29 +229,132 @@ button.blackBg{
     color: yellow;
   }
 
+
   .container > div > a{
-    background:black;
+    background:yellow;
     p{
-      color: yellow;
+      color: black;
     }
-    i{
-      color: yellow;
+  }
+  /*pagina de vacina*/
+  .vacina, .UBS {
+    a{
+      background-color: black;
     }
   }
 
-  .vacina > a{
+  /*infoVac*/
+  #infoContainer{
+    background-color: yellow;
+    h1{
+      color: black;
+    }
+    a{
+      background-color: black;
+    }
+  }
+
+  /*pagina de agendaConsulta*/
+  select {
+    background-color: yellow;
+    border: black solid 1px;
+  }
+
+  #btnvoltar, #btncontinuar{
+    background-color: black;
+    color: yellow;
+  }
+
+  /*pagina de agendaHorario*/
+  .item-EscolheHora{
+    background-color: yellow;
+    color: black;
+    border: solid black 1px;
+  }
+
+  .selHorario {
+    margin: 0.2em;
+    color: yellow;
+    padding: 0.5em;
+    border-radius: 10px;
     background-color: black;
   }
 
-  .vacina > i{
+  .selHorario:hover{
+    background-color: black;
+    color: yellow;
+  }
+
+  .calendar-container{
+    background-color: yellow;
+
+    span{
+      color: black;
+    }
+    
+    li{
+      color: black;
+    }
+
+    .calendar-dates li.inactive {
+      color: #aaa;
+    }
+    
+    .calendar-dates li.active {
+      color: white;
+    }
+        
+    .calendar-dates li.active::before {
+      background-color: black;
+    }
+    
+    .calendar-dates li:not(.active):hover::before {
+      background-color: rgb(172, 172, 172);
+    }
+    
+  }
+
+  /*fimAgendamento*/
+  #btns{
+    background-color: black;
+    color: yellow;
+  }
+
+  /*modal*/
+  .modal{
+    background-color: yellow;
+  }
+
+  /*meus agendamentos*/
+  .btnVerMais, .btnCancelar{
+    background-color: black;
+    color: yellow;
+  }
+
+  #infoAgenda{
+    border: none;
+    #especialidade{
+      color: black;
+    }
+  }
+
+  i{
+    color: black;
+  }
+
+  /*perfil*/
+  #h11, #altDados{
+    background-color: black;
+    color: yellow;
+  }
+  
+  /*cadastro*/
+  #btnCadastrar{
+    background-color: black;
+    color: yellow;
+  }
+  
+  #link, #logo{
     color: black;
   }
 }
-
-/* .tagpcontrast{
-  color: black;
-};
-
-.tagpinvert{
-    color:rgb(255, 255, 255);
-} */

@@ -19,26 +19,9 @@
 </head>
 
 <body>
-    <!-- Cabeçalho da página -->
-    <header>
-        <!-- Barra de navegação -->
-        <div class="nav">
-            <!-- Logo +SUS -->
-            <div id="logo"><a href="pagPrincipal.php">+SUS</a></div>
-            <!-- Lista de links de navegação -->
-            <ul class="navlist">
-                <li class="nav-item">
-                    <a class="nav-link active" href="pagPrincipal.php">Página Principal</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active" href="meusAgendamentos.php">Meus Agendamentos</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active" href="index.php">Sair</a>
-                </li>
-            </ul>
-        </div>
-    </header>
+    <?php
+        include 'header.php';
+    ?>
 
     <!-- Container principal -->
     <div class="container">
@@ -49,7 +32,7 @@
             <!-- Conteúdo do perfil -->
             <div class="content">
                 <!-- Título "Dados Pessoais" -->
-                <h1>Dados Pessoais</h1>
+                <h1 id="h11">Dados Pessoais</h1>
 
                 <!-- Dados pessoais -->
                 <div class="data">

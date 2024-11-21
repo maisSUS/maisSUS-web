@@ -16,6 +16,7 @@
     <?php
         include 'header.php';
     ?>
+    
     <section>
         <h1>Agendamento de consulta</h1>
         <div class="conteudo">
@@ -76,8 +77,8 @@
             </div>
             <!-- botoes de voltar e prosseguir -->
             <div class="botoes">
-                <button class="btnfinais" name="btnvoltar" onclick="history.back()">Voltar</button>
-                <a href="fimAgendamento.php" class="btnfinais" name="btnprosseguir">Continuar</a>
+                <button class="btnfinais" name="btnvoltar" id="btnvoltar" onclick="history.back()">Voltar</button>
+                <a href="fimAgendamento.php" class="btnfinais" name="btncontinuar" id="btncontinuar">Continuar</a>
             </div>
         </div>
         

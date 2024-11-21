@@ -14,7 +14,8 @@
   ?>
 <!-- Sessão com as informações da unidade de Feu rosa -->
     <section>
-        <div id="hepatite">
+      <h1>Informações da unidade de saúde</h1>
+        <div id="infoContainer">
           
           <div>
             <h1>UBS Feu Rosa</h1><br>

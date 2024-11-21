@@ -23,16 +23,16 @@ $(document).ready(function(){
 
     $(document).ready(function(){
       $(".yellowBg").click(function(){
-          $('body').toggleClass('contrast');
+          $('body').toggleClass('yellowMode');
       });
     });
 
     $(document).ready(function(){
       $(".blackBg").click(function(){
-        $('body').toggleClass('invert');
+        $('body').toggleClass('blackMode');
       });
     });
-  });
+});
 
 
   

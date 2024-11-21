@@ -29,7 +29,7 @@
                         <p>Localização R. parara</p>   
                     </div>
                     <!-- Botão com Link para outra pagina -->
-                    <a href="infoUBS.php">Detalhes</a>
+                    <a href="infoUBS.php" class="btnVerMais">Detalhes</a>
                 </div>
 
                 <div class="UBS">
@@ -38,7 +38,7 @@
                         <h3>UBS Jacaraipe</h3>
                         <p>Localização R. parara</p>   
                     </div>
-                    <a href="infoUBS.php">Detalhes</a>
+                    <a href="infoUBS.php" class="btnVerMais">Detalhes</a>
                 </div>
 
                 <div class="UBS">
@@ -47,7 +47,7 @@
                         <h3>UBS Nova Almeida</h3>
                         <p>Localização R. parara</p>   
                     </div>
-                    <a href="infoUBS.php">Detalhes</a>
+                    <a href="infoUBS.php" class="btnVerMais">Detalhes</a>
                 </div>
             </div>
             <div>
@@ -57,7 +57,7 @@
                         <h3>UBS P. Res. Laranjeiras</h3>
                         <p>Localização R. parara</p>   
                     </div>
-                    <a href="infoUBS.php">Detalhes</a>
+                    <a href="infoUBS.php" class="btnVerMais">Detalhes</a>
                 </div>
 
                 <div class="UBS">
@@ -66,7 +66,7 @@
                         <h3>UBS Novo Horizonte</h3>
                         <p>Localização R. parara</p>   
                     </div>
-                    <a href="infoUBS.php">Detalhes</a>
+                    <a href="infoUBS.php" class="btnVerMais">Detalhes</a>
                 </div>
 
                 <div class="UBS">
@@ -75,7 +75,7 @@
                         <h3>UBS Lorem Ipsum</h3>
                         <p>Localização R. parara</p>   
                     </div>
-                    <a href="infoUBS.php">Detalhes</a>
+                    <a href="infoUBS.php" class="btnVerMais">Detalhes</a>
                 </div>
             </div>
         </div>

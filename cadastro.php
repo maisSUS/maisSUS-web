@@ -13,6 +13,9 @@
     <!-- Referência ao arquivo CSS para estilização da página -->
     <link rel="stylesheet" href="css/cadastro.css">
 
+    <link rel="stylesheet" href="css/acessibilidadeBarra.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="js/acessibilidadeBarra.js" defer></script> 
     <!-- Referência ao arquivo JavaScript para validar os inputs (com o atributo defer para carregar após o HTML) -->
     <script src="js/cadastrar.js" defer></script>
 </head>
@@ -23,6 +26,15 @@
 
     <!-- Container principal da página -->
     <div id="container">
+        <div class="btnAcessibilidade">
+            <button class="decreaseFont">A-</button>
+            <button class="increaseFont">A+</button>
+            <button class="blackBg">A</button>
+            <button class="yellowBg">A</button>
+            <button class="dislexia">A</button>
+        </div>
+        <!--Botões da barra de acessibilidade-->
+        
         <!-- Título do formulário de cadastro -->
         <h1>Crie uma conta</h1>
 

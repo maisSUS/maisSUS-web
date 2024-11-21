@@ -46,9 +46,9 @@
             </div>
 
             <div class="botoes">
-                <button class="btnfinais" name="btnvoltar" onclick="history.back()">Voltar</button>
+                <button class="btnfinais" name="btnvoltar" id="btnvoltar" onclick="history.back()">Voltar</button>
                 <!--<a class="btnfinais" name="btnprosseguir" href="agendaHorario.php">Continuar</a>-->
-                <input type="button" value="Continuar" class="btnfinais" id="btnprosseguir" onclick="document.getElementById('id01').style.display='block'">
+                <input type="button" value="Continuar" class="btnfinais" id="btncontinuar" onclick="document.getElementById('id01').style.display='block'">
                 <div id="id01" class="modal">
                     <form class="modal-content">
                         <div class="container">

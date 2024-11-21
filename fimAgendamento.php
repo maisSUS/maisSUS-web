@@ -22,8 +22,8 @@
             <p>Horário: XX:XX</p>
             <p>Unidade:</p>
             <div class="centralizar">
-                <button type="button" class="voltarbtn" onclick="history.back()">Voltar</button>
-                <a class="botao" href="pagPrincipal.php">Finalizar Agendamento</a>
+                <button type="button" class="voltarbtn" id="btns" onclick="history.back()">Voltar</button>
+                <a class="botao" href="pagPrincipal.php" id="btns">Finalizar Agendamento</a>
             </div>
         </div>
     </section>
