@@ -19,41 +19,51 @@
     <section>
         <div>
             <!-- Botão com evento para voltar a pagina principal -->
-            <i class='bx bx-arrow-back' id="seta" onclick="Principal()"><p>Vacinas</p></i>
-            <!-- Lista de Vacinas com nome das doenças que tratam -->
+            <i class='bx bx-arrow-back' id="seta" onclick="Principal()"><p id="voltarVac">Vacinas</p></i>
+        </div>
+        <section>
             <div class="unidades">
-                <div class="vacina">
-                    <i class='bx bx-injection'></i>
-                    <p>Hepatite A</p>
-                    <!-- Botão que leva a uma pagina com as informações dessa vacinas -->
-                    <a href="infoVac.php">Detalhes</a>
-                </div>
+                <!-- Lista de Vacinas com nome das doenças que tratam -->
+                <div>
+                    <div class="vacina">
+                        <i class='bx bx-injection'></i>
+                        <p>Hepatite A</p>
+                        <!-- Botão que leva a uma pagina com as informações dessa vacinas -->
+                        <a href="infoVac.php">Detalhes</a>
+                    </div>
 
-                <div class="vacina">
-                    <i class='bx bx-injection'></i>
-                    <p>Hepatite B</p>
-                    <a href="infoVac.php">Detalhes</a>
-                </div>
+                    <div class="vacina">
+                        <i class='bx bx-injection'></i>
+                        <p>Hepatite B</p>
+                        <a href="infoVac.php">Detalhes</a>
+                    </div>
 
-                <div class="vacina">
-                    <i class='bx bx-injection'></i>
-                    <p>HPV</p>
-                    <a href="infoVac.php">Detalhes</a>
+                    <div class="vacina">
+                        <i class='bx bx-injection'></i>
+                        <p>HPV</p>
+                        <a href="infoVac.php">Detalhes</a>
+                    </div>
                 </div>
+                <div>
+                    <div class="vacina">
+                        <i class='bx bx-injection'></i>
+                        <p>Coronavírus</p>
+                        <a href="infoVac.php">Detalhes</a>
+                    </div>
 
-                <div class="vacina">
-                    <i class='bx bx-injection'></i>
-                    <p>Coronavírus</p>
-                    <a href="infoVac.php">Detalhes</a>
-                </div>
-
-                <div class="vacina">
-                    <i class='bx bx-injection'></i>
-                    <p>Febre amarela</p>
-                    <a href="infoVac.php">Detalhes</a>
+                    <div class="vacina">
+                        <i class='bx bx-injection'></i>
+                        <p>Febre amarela</p>
+                        <a href="infoVac.php">Detalhes</a>
+                    </div>
+                    <div class="vacina">
+                        <i class='bx bx-injection'></i>
+                        <p>Tétano</p>
+                        <a href="infoVac.php">Detalhes</a>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </div>
 </body>
 </html>

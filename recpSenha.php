@@ -31,7 +31,7 @@
             
             <!-- Texto "E-mail" -->
             <div id="e-mailTxt" class="navtxt-text">
-                E-mail
+                <label for="inEmail">E-mail</label>
             </div>
             
             <!-- Campo de entrada para o e-mail -->

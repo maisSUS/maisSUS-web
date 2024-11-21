@@ -20,11 +20,19 @@ $(document).ready(function(){
       $('html').css('font-size', newFontSize);
       return false;
     });
-    $(".blackBg").click(function(){
-      $('body').toggleClass('invert');
+
+    $(document).ready(function(){
+      $(".yellowBg").click(function(){
+          $('body').toggleClass('contrast');
+      });
     });
-    $(".yellowBg").click(function(){
-      $('body').toggleClass('contrast');
+
+    $(document).ready(function(){
+      $(".blackBg").click(function(){
+        $('body').toggleClass('invert');
+      });
     });
   });
+
+
   

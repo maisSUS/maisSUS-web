@@ -15,12 +15,12 @@
     <section>
         <h1>Confira seus dados:</h1>
         <div class="conteudo">
-            <h1>DENTISTA</h1>
-            <p>Paciente: </p>
-            <p>Profissional: </p>
-            <p>Data da consulta: </p>
-            <p>Horário: </p>
-            <p>Unidade: </p>
+            <p style="font-weight: bolder;">DADOS DA CONSULTA</p>
+            <p>Paciente: Francisco Veiga</p>
+            <p>Profissional: Dentista</p>
+            <p>Data da consulta: XX/XX/XXXX</p>
+            <p>Horário: XX:XX</p>
+            <p>Unidade:</p>
             <div class="centralizar">
                 <button type="button" class="voltarbtn" onclick="history.back()">Voltar</button>
                 <a class="botao" href="pagPrincipal.php">Finalizar Agendamento</a>

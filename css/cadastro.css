@@ -115,12 +115,7 @@ p {
     /* Cor de fundo */
 }
 
-/* Estilos para os inputs #inNome e #inSobrenome */
-#inNome,
-#inSobrenome {
-    width: 9.8em;
-    /* Define a largura */
-}
+
 
 /* Estilos para o botão de cadastrar */
 #btnCadastrar {
