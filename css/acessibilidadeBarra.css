@@ -295,13 +295,9 @@ button.blackBg{
     li{
       color: black;
     }
-
-    .calendar-dates li.inactive {
-      color: #aaa;
-    }
     
     .calendar-dates li.active {
-      color: white;
+      color: yellow;
     }
         
     .calendar-dates li.active::before {
