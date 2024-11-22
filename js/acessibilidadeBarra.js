@@ -32,6 +32,11 @@ $(document).ready(function(){
         $('body').toggleClass('blackMode');
       });
     });
+    $(document).ready(function(){
+        $(".dislexia").click(function(){
+          $('body').toggleClass('dislexiaMode');
+        });
+      });
 });
 
 
