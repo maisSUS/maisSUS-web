@@ -155,3 +155,10 @@ section > div{
 .btnVoltar:hover{
     background-color: #577b74;
 }
+#infoubs{
+    margin: 0 auto;
+    min-width: 50vw;
+    max-width: 60vw;
+    font-weight: bold;
+    font-size: 1.5em;
+}

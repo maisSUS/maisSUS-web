@@ -14,6 +14,7 @@
     ?>
     <!-- Sessão com as informações da Vacina da Hepatite -->
     <section>   
+      <h1 id="infoubs">Informações da vacina</h1>
       <div id="infoContainer">
         <div>
           <h1>Hepatite A</h1>

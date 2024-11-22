@@ -7,6 +7,8 @@
     <link rel="icon" href="img/serra.png">
     <link rel="stylesheet" href="css/navBar.css">
     <link rel="stylesheet" href="css/agendaConsulta.css">
+    <link rel="stylesheet" href="css/cancelamento.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
     <?php
@@ -62,12 +64,29 @@
             <!-- botoes para prosseguir e voltar  -->
             <div class="botoes">
                 <button class="btnfinais" id="btnvoltar" onclick="history.back()">Voltar</button>
-                <input type="button" value="Continuar" class="btnfinais" id="btncontinuar">
+                <input type="button" value="Continuar" class="btnfinais" id="btncontinuar" onclick="document.getElementById('id01').style.display='block'">
+                <div id="id01" class="modal">
+                    <form class="modal-content">
+                        <div class="container">
+                            <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">×</span>
+                            <i class='bx bx-error' ></i>
+                            <h2 id="aviso">ATENÇÃO!</h2>
+                            <p>Para agendar essa consulta é necessário ter o</br> encaminhamento do clínico geral. Se já possui,</br> siga em frente. Se não possui, procure um clínico</br> geral antes.</p>
+                            <div class="centralizar">
+                                <div class="clearfix">
+                                    <button type="button" class="voltarbtn" onclick="document.getElementById('id01').style.display='none'">Voltar</button>
+                                    <button type="button" class="avancarbtn" id="avancarbtn">Seguir em frente</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
                 <script>
+                    var avancar = document.getElementById("avancarbtn");
                     function continuar() {
                         window.location.href = "agendaHorario.php";
                     }
-                    btncontinuar.addEventListener("click", continuar);
+                    avancarbtn.addEventListener("click", continuar);
                 </script>
                     
             </div>

@@ -14,8 +14,9 @@
     <?php
         include 'header.php';
     ?>
-    <h1>Agendamento de Exame</h1>
+    
     <section>
+        <h1>Agendamento de Exame</h1>
         <div class="conteudo">
 
             <!-- lista de unidades disponiveis  -->

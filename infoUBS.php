@@ -14,27 +14,26 @@
   ?>
 <!-- Sessão com as informações da unidade de Feu rosa -->
     <section>
-      <h1>Informações da unidade de saúde</h1>
-        <div id="infoContainer">
-          
-          <div>
-            <h1>UBS Feu Rosa</h1><br>
-            <p>Localização: Feu rosa, Serra</p>
-            <p>Contato: (27) 99123-4567</p>
-            <br>
+      <h1 id="infoubs">Informações da unidade de saúde</h1>
+      <div id="infoContainer">
+        <div>
+          <h1>UBS Feu Rosa</h1><br>
+          <p>Localização: Feu rosa, Serra</p>
+          <p>Contato: (27) 99123-4567</p>
+          <br>
 
-            <h2>Horario de funcionamento:</h2>
-            <p>Segunda-Feira: 07:00 - 21:00</p>
-            <p>Terça-Feira: 07:00 - 21:00</p>
-            <p>Quarta-Feira: 07:00 - 21:00</p>
-            <p>Quinta-Feira: 07:00 - 21:00</p>
-            <p>Sexta-Feira: 07:00 - 21:00</p>
-            <p>Sábado: Fechado</p>
-            <p>Domingo: Fechado</p>
-          </div>
-        <!-- Botão para voltar na pagina anterior -->
-          <a class="btnVoltar" href="ubs.php">Voltar</a>
+          <h2>Horario de funcionamento:</h2>
+          <p>Segunda-Feira: 07:00 - 21:00</p>
+          <p>Terça-Feira: 07:00 - 21:00</p>
+          <p>Quarta-Feira: 07:00 - 21:00</p>
+          <p>Quinta-Feira: 07:00 - 21:00</p>
+          <p>Sexta-Feira: 07:00 - 21:00</p>
+          <p>Sábado: Fechado</p>
+          <p>Domingo: Fechado</p>
         </div>
+      <!-- Botão para voltar na pagina anterior -->
+        <a class="btnVoltar" href="ubs.php">Voltar</a>
+      </div>
     </section>
 
     
