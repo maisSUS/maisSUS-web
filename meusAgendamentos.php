@@ -19,7 +19,7 @@
     <section>
 
         <!--Seta para volta-->
-        <i class='bx bx-arrow-back' id="seta" onclick="Principal()"><p id="voltarTitle">Meus agendamentos</p></i>
+        <i class='bx bx-arrow-back' id="setaagd" onclick="Principal()"><p id="pSeta">Meus agendamentos</p></i>
 
         <h1>CONSULTE OU CANCELE SEUS AGENDAMENTOS</h1>
         <div class="lista">
