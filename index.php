@@ -1,9 +1,6 @@
 <?php
 // Inicia a sessão
 session_start();
-$erro="";
-var_dump( $_POST); 
-var_dump( $_SESSION); 
 
 // Verifica se o formulário foi enviado
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -11,8 +8,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     
     if (isset($_POST['login'])):
-
-        
         $cpf = $_POST['cpf']; 
         $senha = $_POST['senha']; 
 
@@ -57,7 +52,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         <h1>Faça seu login</h1>
                     </div>
                     <!-- Formulário de login -->
-                    <form method="POST" action="pagPrincipal.php">
+                    <form method="POST" action="">
                         <div id="txtUser" class="navtxt-text"><label for="inID">CPF</label></div>
                         <div id="inUser" class="navtxt-text"><input type="text" id="inID" class="circle" name="cpf" placeholder="123.456.789-00"></div>
                         <div id="txtPassword" class="navtxt-text"><label for="inSenha">Senha</label></div>
@@ -68,6 +63,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         </div>
                         <div id="btnEntrar" class="navtxt-button">
                             <input type="submit" value="Entrar" name="login" class="green-button">
+                            <a href="recpSenha.php" id="linkA">Esqueci minha senha</a>
                         </div>
                         <?php if (isset($erro)): ?>
                             <p style="color: red;"><?php echo $erro; ?></p>
