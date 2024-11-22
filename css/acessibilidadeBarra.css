@@ -33,6 +33,17 @@ button.blackBg{
 }
 .dislexia{
   font-family: 'OpenDyslexic', sans-serif;
+  background: white;
+  color: black;
+  border: solid black 1px;
+  height: 50px;
+  width: 50px;
+  display:inline-block;
+  text-align: center;
+  transition: .3s;
+  font-size: 18px;
+  position: relative;
+  top: -1px;
 }
 
 .dislexiaMode{
