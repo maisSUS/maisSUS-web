@@ -31,6 +31,9 @@ button.blackBg{
   display: inline;
   margin-top: 1em;
 }
+.dislexia{
+  font-family: 'OpenDyslexic', sans-serif;
+}
 
 .dislexiaMode{
   font-family: 'OpenDyslexic', sans-serif;
