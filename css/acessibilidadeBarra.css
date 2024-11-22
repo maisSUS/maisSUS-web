@@ -1,3 +1,5 @@
+@import url('https://fonts.cdnfonts.com/css/opendyslexic');
+
 .decreaseFont, .increaseFont, .blackBg, .yellowBg, .dislexia{
   background: white;
   color: black;
@@ -30,6 +32,140 @@ button.blackBg{
   margin-top: 1em;
 }
 
+.dislexiaMode{
+  font-family: 'OpenDyslexic', sans-serif;
+  src: url('http://dyslexicfonts.com/fonts/OpenDyslexic-Regular.otf');
+  font-style: normal;
+  font-weight: normal;
+  .container > div > a{
+    p{
+      font-family: 'OpenDyslexic', sans-serif;
+
+    }
+  }
+  .nav, footer{
+    p{
+      font-family: 'OpenDyslexic', sans-serif;
+    }
+  }
+
+  i{
+    font-family: 'OpenDyslexic', sans-serif;
+  }
+
+  footer{
+    font-family: 'OpenDyslexic', sans-serif;
+  }
+  #logo > a{
+    font-family: 'OpenDyslexic', sans-serif;
+  }
+
+  header{
+    .nav{
+    font-family: 'OpenDyslexic', sans-serif;
+    }
+
+    a{
+      font-family: 'OpenDyslexic', sans-serif;
+    }
+  }
+
+  .vacina, .UBS {
+    font-family: 'OpenDyslexic', sans-serif;
+    a{
+      font-family: 'OpenDyslexic', sans-serif;
+    }
+  }
+
+  #infoContainer{
+    font-family: 'OpenDyslexic', sans-serif;
+    h1{
+      font-family: 'OpenDyslexic', sans-serif;
+    }
+    a{
+      font-family: 'OpenDyslexic', sans-serif;
+    }
+  }
+
+  select {
+    font-family: 'OpenDyslexic', sans-serif;
+  }
+
+  #btnvoltar, #btncontinuar{
+    font-family: 'OpenDyslexic', sans-serif;
+  }
+
+  .conteudo{
+    font-family: 'OpenDyslexic', sans-serif;
+  }
+
+  .item-EscolheHora{
+    font-family: 'OpenDyslexic', sans-serif;
+  }
+
+  .selHorario {
+    font-family: 'OpenDyslexic', sans-serif;
+  }
+
+  .selHorario:hover{
+    font-family: 'OpenDyslexic', sans-serif;  }
+
+  .calendar-container{
+        font-family: 'OpenDyslexic', sans-serif;
+  }
+
+  .item{
+    font-family: 'OpenDyslexic', sans-serif;
+  }
+
+  .agendamentos, .modal, .modal-content{
+    font-family: 'OpenDyslexic', sans-serif;
+  }
+
+  .container{
+    font-family: 'OpenDyslexic', sans-serif;
+  }
+
+  .close{
+    font-family: 'OpenDyslexic', sans-serif;
+  }
+
+  b, p, h1, h2, h3, div, label, i, li, a, option{
+    font-family: 'OpenDyslexic', sans-serif;
+  }
+
+
+  .btnVerMais, .btnCancelar{
+    font-family: 'OpenDyslexic', sans-serif;
+
+  }
+
+  /*infoAgendamento*/
+  #infoAgenda{
+    font-family: 'OpenDyslexic', sans-serif;
+    #especialidade{
+      font-family: 'OpenDyslexic', sans-serif;
+    }
+  }
+
+  /*perfil*/
+  .content{
+    font-family: 'OpenDyslexic', sans-serif;
+    #h11, #altDados{
+      font-family: 'OpenDyslexic', sans-serif;
+
+    }
+  }
+
+  /*cadastro*/
+  #btnCadastrar{
+    font-family: 'OpenDyslexic', sans-serif;
+  }
+
+  #link, #logo{
+    font-family: 'OpenDyslexic', sans-serif;
+  }
+}
 /*acionado ao clicar em blackbg*/
 .blackMode{
   color:white;

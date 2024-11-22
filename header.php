@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/acessibilidadeBarra.css">
+    <link href="https://fonts.cdnfonts.com/css/opendyslexic" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="js/acessibilidadeBarra.js" defer></script> 
     <title>Document</title>
@@ -31,6 +32,6 @@
         <button class="increaseFont">A+</button>
         <button class="blackBg">A</button>
         <button class="yellowBg">A</button>
-        <button class="dislexia">A</button>
+        <button class="dislexia">F</button>
 
     </header>
