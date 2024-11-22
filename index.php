@@ -14,7 +14,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         // Verifica as credenciais (use credenciais fictícias para demonstração)
         if ($cpf === "123" && $senha === "123") {
             // Armazena o nome na sessão (substituir "Usuário Teste" por uma lógica real)
-            $_SESSION['usuario'] = "Usuário Teste";
+            $_SESSION['usuario'] = "Chicoiins";
 
             // Redireciona para a página principal
             header('Location: pagPrincipal.php');
