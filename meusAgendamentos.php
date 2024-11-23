@@ -21,7 +21,7 @@
         <!--Seta para volta-->
         <i class='bx bx-arrow-back' id="setaagd" onclick="Principal()"><p id="pSeta">Meus agendamentos</p></i>
 
-        <h1>CONSULTE OU CANCELE SEUS AGENDAMENTOS</h1>
+        <h1>Consulte ou cancele seus agendamentos</h1>
         <div class="lista">
 
             <!--Bloco com as informacoes principais de cada agendamento-->

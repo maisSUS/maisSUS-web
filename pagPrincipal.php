@@ -30,19 +30,19 @@
       <div>
         <!-- Link para agenda de consulta -->
         <a href="agendaConsulta.php" class="direcionamento">
-          <i class='bx bx-calendar-event'></i>
+          <i class='bx bx-calendar-event' alt=""></i>
           <p class="pclass">Agendar Consultas</p>
         </a>
 
         <!-- Link para agenda de exame -->
         <a href="agendaExame.php" class="direcionamento">
-          <i class='bx bx-calendar-event'></i>
+          <i class='bx bx-calendar-event' alt=""></i>
           <p>Agendar Exames</p>
         </a>
 
         <!-- Link para meus agendamentos -->
         <a href="meusAgendamentos.php" class="direcionamento">
-          <i class='bx bx-calendar-check'></i>
+          <i class='bx bx-calendar-check' alt=""></i>
           <p>Meus Agendamentos</p>
         </a>
       </div>
@@ -51,13 +51,13 @@
       <div>
         <!-- Link para vacinas -->
         <a href="vacinas.php" class="direcionamento">
-          <i class='bx bx-injection'></i>
+          <i class='bx bx-injection' alt=""></i>
           <p>Vacinas</p>
         </a>
 
         <!-- Link para unidades de saúde -->
         <a href="ubs.php" class="direcionamento">
-          <i class="fa-regular fa-hospital"></i>
+          <i class="fa-regular fa-hospital" alt=""></i>
           <p>Unidades de Saúde</p>
         </a>
       </div>

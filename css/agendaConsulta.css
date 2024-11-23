@@ -1,35 +1,11 @@
-select {
-    border: #cbcbcb solid 1px;
-    border-radius: 10px;
-    background-color: #e2f8f4;
-    width: 100%;
-    padding: 0.6em 0.3em;
-    font-size: 1em;
+
+/*define as margens e o padding da section*/
+section{
+    padding: 0em 2em;
+    margin-top: 2em;
 }
 
-.especialidades, .unidades, .profissionais {
-    display: inline;
-    padding: 2em;
-}
-
-h1{
-    margin: 0 auto;
-    min-width: 50vw;
-    max-width: 60vw;
-    font-weight: bold;
-    font-size: 1.5em;
-}
-
-
-.item {
-    margin-top: 0.4rem;
-    margin-bottom: 0.4rem;
-    display: block;
-    width: 100%;
-    font-weight: bold;
-    font-size: 1em;
-}
-
+/*estiliza a caixa que tem todos os selects e botões*/
 .conteudo {
     padding: 1em;
     border: none;
@@ -43,11 +19,42 @@ h1{
 }
 
 
-section{
-    padding: 0em 2em;
-    margin-top: 2em;
+/*decora o título da página*/
+#h1{
+    margin: 0 auto;
+    min-width: 50vw;
+    max-width: 60vw;
+    font-weight: bold;
+    font-size: 1.5em;
 }
 
+/*Decora as drop-down lists*/
+select {
+    border: #cbcbcb solid 1px;
+    border-radius: 10px;
+    background-color: #e2f8f4;
+    width: 100%;
+    padding: 0.6em 0.3em;
+    font-size: 1em;
+}
+
+/*organiza as divs que tem essas classes*/
+.especialidades, .unidades, .profissionais {
+    display: inline;
+    padding: 2em;
+}
+
+/*decora as labels*/
+.item {
+    margin-top: 0.4rem;
+    margin-bottom: 0.4rem;
+    display: block;
+    width: 100%;
+    font-weight: bold;
+    font-size: 1em;
+}
+
+/*estiliza os dois botões*/
 .avancarbtn, .voltarbtn {
     float: left;
     width: 25%;
@@ -56,20 +63,28 @@ section{
     border-radius: 10px;
     font-size:larger;
 }
+
+/*estiliza o botão de avançar*/
 .avancarbtn {
     margin-left: 3em;
     background-color: #3C827A;
     color: rgb(255, 247, 247);
     width: 15vw;
 }
+
+/*estiliza o botão de voltar*/
 .voltarbtn {
     background-color: #3C827A;
     color: white;
     width: 15vw;
 }
+
+/*define o tamanho da seta no botão voltar*/
 i{
     font-size: 5.5em;
 }
+
+/*define o tamanho e margem inferior do título do modal*/
 #aviso{
     font-size: 2em;
     margin-bottom: 0.5em;
