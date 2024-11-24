@@ -2,14 +2,18 @@
 // Inicia a sessão
 session_start();
 
+// Função para sanitizar entradas
+function sanitizar($data) {
+    return htmlspecialchars(trim($data), ENT_QUOTES, 'UTF-8');
+}
+
 // Verifica se o formulário foi enviado
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-        // Captura o CPF e a senha enviados pelo formulário, com fallback para strings vazias
-
-    
-    if (isset($_POST['login'])):
-        $cpf = $_POST['cpf']; 
-        $senha = $_POST['senha']; 
+    // Verifica se o botão de login foi clicado
+    if (isset($_POST['login'])) {
+        // Captura o CPF e a senha enviados pelo formulário e os sanitiza
+        $cpf = isset($_POST['cpf']) ? sanitizar($_POST['cpf']) : '';
+        $senha = isset($_POST['senha']) ? sanitizar($_POST['senha']) : '';
 
         // Verifica as credenciais (use credenciais fictícias para demonstração)
         if ($cpf === "123" && $senha === "123") {
@@ -22,11 +26,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         } else {
             // Exibe uma mensagem de erro caso as credenciais estejam erradas
             $erro = "CPF ou senha incorretos!";
-            
         }
-    endif;
+    }
 }
 ?>
+
+
+<?php if (isset($erro)): ?>
+    <p style="color: red;"><?php echo htmlspecialchars($erro, ENT_QUOTES, 'UTF-8'); ?></p>
+<?php endif; ?>
 
 
 <!DOCTYPE html>

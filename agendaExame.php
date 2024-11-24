@@ -22,7 +22,6 @@
             <!-- lista de unidades disponiveis  -->
             <div class="unidades">
                 <label class="item" for="unidade">Selecione uma unidade:</label>
-
                 <select name="unidade" id="unidade">
                 <option value="feurosa">Feu Rosa</option>
                 <option value="vnc">Vila Nova de Colares</option>
@@ -36,13 +35,12 @@
             <!-- lista de exames  -->
             <div class="exames">
                 <label class="item" for="exame">Escolha o exame desejado:</label>
-
-                <select name="exame" id="exame">
-                <option value="exmSangue">Exame de Sangue</option>
-                <option value="exmPapaNicolau">Papa-Nicolau</option>
-                <option value="exmPreNatal">Pré-Natal</option>
-                <option value="exmRadiog">Radiografia</option>
-                <option value="exmMamog">Mamografia</option>
+                    <select name="exame" id="exame">
+                    <option value="exmSangue">Exame de Sangue</option>
+                    <option value="exmPapaNicolau">Papa-Nicolau</option>
+                    <option value="exmPreNatal">Pré-Natal</option>
+                    <option value="exmRadiog">Radiografia</option>
+                    <option value="exmMamog">Mamografia</option>
                 </select>
             </div>
 
