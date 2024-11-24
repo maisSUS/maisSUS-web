@@ -25,7 +25,7 @@
                 <div class="UBS">
                     <div>
                         <i class="fa-regular fa-hospital"></i>
-                        <h3>UBS Feu Rosa</h3>
+                        <h3>URS Feu Rosa</h3>
                         <p>Localização R. parara</p>   
                     </div>
                     <!-- Botão com Link para outra pagina -->

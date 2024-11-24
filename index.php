@@ -1,31 +1,30 @@
 <?php
-// Inicia a sessão
-session_start();
-
-// Verifica se o formulário foi enviado
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    // Inicia a sessão
+    session_start();
+                            
+    // Verifica se o formulário foi enviado
+    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         // Captura o CPF e a senha enviados pelo formulário, com fallback para strings vazias
+        
+        if (isset($_POST['login'])):
+            $erro = array();
+            $cpf = $_POST['cpf']; 
+            $senha = $_POST['senha']; 
 
-    
-    if (isset($_POST['login'])):
-        $cpf = $_POST['cpf']; 
-        $senha = $_POST['senha']; 
+            // Verifica as credenciais (use credenciais fictícias para demonstração)
+            if ($cpf === "123" && $senha === "123") {
+                // Armazena o nome na sessão (substituir "Usuário Teste" por uma lógica real)
+                $_SESSION['usuario'] = "Chicoiins";
 
-        // Verifica as credenciais (use credenciais fictícias para demonstração)
-        if ($cpf === "123" && $senha === "123") {
-            // Armazena o nome na sessão (substituir "Usuário Teste" por uma lógica real)
-            $_SESSION['usuario'] = "Chicoiins";
-
-            // Redireciona para a página principal
-            header('Location: pagPrincipal.php');
-            exit;
-        } else {
-            // Exibe uma mensagem de erro caso as credenciais estejam erradas
-            $erro = "CPF ou senha incorretos!";
-            
-        }
-    endif;
-}
+                // Redireciona para a página principal
+                header('Location: pagPrincipal.php');
+                exit;
+            } else {
+                // Exibe uma mensagem de erro caso as credenciais estejam erradas
+                $erro[] = "CPF ou senha incorretos!";
+            }
+        endif;
+    }
 ?>
 
 
@@ -66,10 +65,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                             <input type="submit" value="Entrar" name="login" class="green-button">
                             <a href="recpSenha.php" id="linkA">Esqueci minha senha</a>
                         </div>
-                        <?php if (isset($erro)): ?>
-                            <p style="color: red;"><?php echo $erro; ?></p>
+                        <?php if(!empty($erro)): ?>
+                        <p style="color: red;"><?php echo $erro[0]; ?></p>
                         <?php endif; ?>
-                        <div class="navtxt-link"><a href="cadastro.php">Não possui conta? <b>Crie uma aqui</b></a></div>
+                        <div class="navtxt-link"><a href="cadastro.php">Não possui conta? <strong>Crie uma aqui</strong></a></div>
                     </form>
                 </div>
             </div>
