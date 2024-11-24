@@ -44,6 +44,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Login</title>
+        <link rel="icon" href="img/serra.png">
         <link rel="stylesheet" href="css/login.css">
         <script src="js/logar.js" defer></script>
     </head>
@@ -67,7 +68,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         <div id="inPassword" class="navtxt-text">
                             <input type="password" id="inSenha" class="circle" name="senha">
                             <!-- Ícone de olho para mostrar/esconder a senha -->
-                            <img src="https://cdn0.iconfinder.com/data/icons/ui-icons-pack/100/ui-icon-pack-14-512.png" id="olho" class="olho" title="mostrar senha" alt="mostrar Senha" tabindex="0">
+                            <img src="https://cdn0.iconfinder.com/data/icons/ui-icons-pack/100/ui-icon-pack-14-512.png" id="olho" class="olho" title="mostrar senha" alt="imagem clicável de um olho em preto e branco para mostrar a senha" tabindex="0">
                         </div>
                         <div id="btnEntrar" class="navtxt-button">
                             <input type="submit" value="Entrar" name="login" class="green-button">

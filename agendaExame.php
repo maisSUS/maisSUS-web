@@ -16,7 +16,7 @@
     ?>
     
     <section>
-        <h1>Agendamento de Exame</h1>
+        <h1 id="h1">Agendamento de Exame</h1>
         <div class="conteudo">
 
             <!-- lista de unidades disponiveis  -->
@@ -53,7 +53,7 @@
                         <div class="container">
                             <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">×</span>
                             <i class='bx bx-error' ></i>
-                            <h2 id="aviso">ATENÇÃO!</h2>
+                            <h1 id="aviso">ATENÇÃO!</h1>
                             <p>Para agendar essa consulta é necessário ter o</br> encaminhamento do clínico geral. Se já possui,</br> siga em frente. Se não possui, procure um clínico</br> geral antes.</p>
                             <div class="centralizar">
                                 <div class="clearfix">

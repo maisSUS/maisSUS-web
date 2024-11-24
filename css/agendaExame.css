@@ -1,47 +1,10 @@
-select {
-    border: #cbcbcb solid 1px;
-    border-radius: 10px;
-    background-color: #e2f8f4;
-    width: 100%;
-    padding: 0.6em 0.3em;
-    font-size: 1em;
+/* Decora a section */
+section{
+    padding: 0em 2em;
+    margin-top: 2em;
 }
 
-.exames, .unidades {
-    display: inline;
-    padding: 2em;
-}
-
-.item {
-    margin-top: 0.4rem;
-    margin-bottom: 0.4rem;
-    display: block;
-    width: 100%;
-    font-weight: bold;
-    font-size: 1em;
-}
-
-
-.btnfinais {
-    margin-top: 2rem;
-    font-size: 1.2rem;
-    padding: 0.4em;
-    color: white;
-    border: none;
-    border-radius: 10px;
-    background-color:#3C827A;
-}
-
-.btnfinais a{
-    font-size: 1.2rem;
-    color: white;
-}
-
-.botoes {
-    display: flex;
-    justify-content: space-between;
-}
-
+/*decora*/
 .conteudo {
     padding: 1em;
     border: none;
@@ -52,19 +15,64 @@ select {
     max-width: 60vw;
     display: block;
 }
-
-h1{
+/*decora o título da página*/
+#h1{
     margin: 0 auto;
     min-width: 50vw;
     max-width: 60vw;
     font-weight: bold;
     font-size: 1.5em;
 }
-/* Decora a section */
-section{
-    padding: 0em 2em;
-    margin-top: 2em;
+
+/*Decora as listas drop-down*/
+select {
+    border: #cbcbcb solid 1px;
+    border-radius: 10px;
+    background-color: #e2f8f4;
+    width: 100%;
+    padding: 0.6em 0.3em;
+    font-size: 1em;
 }
+
+/*organiza as divs que tem essas classes*/
+.exames, .unidades {
+    display: inline;
+    padding: 2em;
+}
+
+/*decora as labels*/
+.item {
+    margin-top: 0.4rem;
+    margin-bottom: 0.4rem;
+    display: block;
+    width: 100%;
+    font-weight: bold;
+    font-size: 1em;
+}
+
+/*estiliza os dois botões com essa classe*/
+.btnfinais {
+    margin-top: 2rem;
+    font-size: 1.2rem;
+    padding: 0.4em;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    background-color:#3C827A;
+}
+/* 
+.btnfinais a{
+    font-size: 1.2rem;
+    color: white;
+} */
+
+/*define a organização dentro dessa div*/
+.botoes {
+    display: flex;
+    justify-content: space-between;
+}
+
+/*decora os botões do modal*/
 .avancarbtn, .voltarbtn {
     float: left;
     width: 25%;
@@ -73,23 +81,33 @@ section{
     border-radius: 10px;
     font-size:larger;
 }
+
+/*decora o botão de seguir em frente do modal*/
 .avancarbtn {
     margin-left: 3em;
     background-color: #3C827A;
     color: rgb(255, 247, 247);
     width: 15vw;
 }
+
+/*decora o botão de voltar no modal*/
 .voltarbtn {
     background-color: #3C827A;
     color: white;
     width: 15vw;
 }
+
+/*define a margem superior da div que contém a div dos botões do modal*/
 .centralizar {
     margin-top: 1em;
 }
+
+/*define o tamanho da seta no botão voltar*/
 i{
     font-size: 5.5em;
 }
+
+/*define o tamanho e margem inferior do título do modal*/
 #aviso{
     font-size: 2em;
     margin-bottom: 0.5em;
