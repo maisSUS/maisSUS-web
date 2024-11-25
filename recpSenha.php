@@ -17,9 +17,9 @@
 </head>
 <body>
     <?php
-    // Função para sanitizar entradas
+    // Função para sanitizar entradas usando FILTER_SANITIZE_SPECIAL_CHARS
     function sanitizar($data) {
-        return htmlspecialchars(trim($data), ENT_QUOTES, 'UTF-8');
+        return filter_var(trim($data), FILTER_SANITIZE_SPECIAL_CHARS);
     }
 
     // Mensagem de erro ou sucesso

@@ -1,8 +1,8 @@
 <?php
-/*
-// Função para sanitizar entradas
+
+// Função para sanitizar entradas usando FILTER_SANITIZE_SPECIAL_CHARS
 function sanitizar($data) {
-    return htmlspecialchars(trim($data), ENT_QUOTES, 'UTF-8');
+    return filter_var(trim($data), FILTER_SANITIZE_SPECIAL_CHARS);
 }
 
 // Mensagem de erro ou sucesso
@@ -32,86 +32,76 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         // Aqui você incluiria a lógica para salvar os dados no banco de dados
         $mensagem = "Cadastro realizado com sucesso!";
     }
-}*/
-    
-    // Verifica se o formulário foi enviado
-    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-        // Captura o CPF e a senha enviados pelo formulário, com fallback para strings vazias
-        
-        if (isset($_POST['cadastrar'])){
-            $erros = array();
-            $nome = $_POST['nome'];
-            $cpf = $_POST['cpf']; 
-            $cartaoSus = $_POST['cartaoSus'];
-            $telefone = $_POST['telefone'];
-            $email = $_POST['email'];
-            $senha = $_POST['senha'];
-            $confSenha = $_POST['confSenha'];
+}
 
-            $expNm = array("options"=>array("regexp"=>"/^[a-zA-Z' ']/"));
-            if(empty($nome)){
-                $erros["nome"] = "O nome completo é obrigatório *";
-            }
-            elseif(!filter_var($nome, FILTER_VALIDATE_REGEXP, $expNm)){
-                $erros["nome"] = "O nome deve possuir somente letras";
-            }
+// Verifica se o formulário foi enviado
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    if (isset($_POST['cadastrar'])) {
+        $erros = array();
+        $nome = sanitizar($_POST['nome']);
+        $cpf = sanitizar($_POST['cpf']);
+        $cartaoSus = sanitizar($_POST['cartaoSus']);
+        $telefone = sanitizar($_POST['telefone']);
+        $email = sanitizar($_POST['email']);
+        $senha = sanitizar($_POST['senha']);
+        $confSenha = sanitizar($_POST['confSenha']);
 
-            $expCpf = array("options"=>array("regexp"=>"/^\d{3}\.\d{3}\.\d{3}-\d{2}$/"));
-            if(empty($cpf)){
-                $erros["cpf"] = "O cpf é obrigatório *";
-            }
-            elseif(!filter_var($cpf, FILTER_VALIDATE_REGEXP, $expCpf)){
-                $erros["cpf"] = "O CPF deve possuir o formato 123.456.789-00";
-            }
-            
-            $expSus = array("options"=>array("regexp"=>"/^\d{15}$/"));
-            if(empty($cartaoSus)){
-                $erros["cartaoSus"] = "O cartão do SUS é obrigatório *";
-            }
-            elseif(!filter_var($cartaoSus, FILTER_VALIDATE_REGEXP, $expSus)){
-                $erros["cartaoSus"] = "O cartão do SUS deve possuir quinze números consecutivos";
-            }
+        // Validações específicas
+        $expNm = array("options" => array("regexp" => "/^[a-zA-Z' ']+$/"));
+        if (empty($nome)) {
+            $erros["nome"] = "O nome completo é obrigatório *";
+        } elseif (!filter_var($nome, FILTER_VALIDATE_REGEXP, $expNm)) {
+            $erros["nome"] = "O nome deve possuir somente letras";
+        }
 
-            $expTel = array("options"=>array("regexp"=>"/^\(\d{2}\) \d{5}-\d{4}$/"));
-            if(empty($telefone)){
-                $erros["tel"] = "O telefone é obrigatório *";
-            }
-            elseif(!filter_var($telefone, FILTER_VALIDATE_REGEXP, $expTel)){
-                $erros["tel"] = "O telefone deve possuir o formato (DDD) 12345-6789";
-            }
+        $expCpf = array("options" => array("regexp" => "/^\d{3}\.\d{3}\.\d{3}-\d{2}$/"));
+        if (empty($cpf)) {
+            $erros["cpf"] = "O cpf é obrigatório *";
+        } elseif (!filter_var($cpf, FILTER_VALIDATE_REGEXP, $expCpf)) {
+            $erros["cpf"] = "O CPF deve possuir o formato 123.456.789-00";
+        }
 
-            if(empty($email)){
-                $erros["email"] = "O email é obrigatório *";
-            }
-            elseif(!filter_var($email, FILTER_VALIDATE_EMAIL)){
-                $erros["email"] = "O email deve ser no formato nome@dominio.com";
-            }
+        $expSus = array("options" => array("regexp" => "/^\d{15}$/"));
+        if (empty($cartaoSus)) {
+            $erros["cartaoSus"] = "O cartão do SUS é obrigatório *";
+        } elseif (!filter_var($cartaoSus, FILTER_VALIDATE_REGEXP, $expSus)) {
+            $erros["cartaoSus"] = "O cartão do SUS deve possuir quinze números consecutivos";
+        }
 
-            $expSenha = array("options"=>array("regexp"=>"/^(?=.*[A-Z]).{5,}$/"));
-            if(empty($senha)){
-                $erros["senha"] = "A senha é obrigatória *";
-            }
-            elseif(!filter_var($senha, FILTER_VALIDATE_REGEXP, $expSenha)){
-                $erros["senha"] = "A senha deve ter mais que 4 caracteres e conter uma letra maiúscula";
-            }
+        $expTel = array("options" => array("regexp" => "/^\(\d{2}\) \d{5}-\d{4}$/"));
+        if (empty($telefone)) {
+            $erros["tel"] = "O telefone é obrigatório *";
+        } elseif (!filter_var($telefone, FILTER_VALIDATE_REGEXP, $expTel)) {
+            $erros["tel"] = "O telefone deve possuir o formato (DDD) 12345-6789";
+        }
 
-            if(!isset($erros["senha"]) && empty($confSenha)){
-                $erros["confSenha"] = "Confirmar a senha é obrigatório *";
-            }
-            elseif(isset($erros["senha"]) && $senha == $confSenha){
-                $erros["confSenha"] = $erros["senha"];
-            }
-            elseif(!isset($erros["senha"]) && $senha != $confSenha){
-                $erros["confSenha"] = "As senhas não correspondem *";
-            }
+        if (empty($email)) {
+            $erros["email"] = "O email é obrigatório *";
+        } elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+            $erros["email"] = "O email deve ser no formato nome@dominio.com";
+        }
 
-            if(empty($erros)){
-                header('Location: pagPrincipal.php');
-                exit;
-            }
+        $expSenha = array("options" => array("regexp" => "/^(?=.*[A-Z]).{5,}$/"));
+        if (empty($senha)) {
+            $erros["senha"] = "A senha é obrigatória *";
+        } elseif (!filter_var($senha, FILTER_VALIDATE_REGEXP, $expSenha)) {
+            $erros["senha"] = "A senha deve ter mais que 4 caracteres e conter uma letra maiúscula";
+        }
+
+        if (!isset($erros["senha"]) && empty($confSenha)) {
+            $erros["confSenha"] = "Confirmar a senha é obrigatório *";
+        } elseif (isset($erros["senha"]) && $senha == $confSenha) {
+            $erros["confSenha"] = $erros["senha"];
+        } elseif (!isset($erros["senha"]) && $senha != $confSenha) {
+            $erros["confSenha"] = "As senhas não correspondem *";
+        }
+
+        if (empty($erros)) {
+            header('Location: pagPrincipal.php');
+            exit;
         }
     }
-
+}
 ?>
 
 <!DOCTYPE html>
