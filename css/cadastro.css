@@ -89,6 +89,7 @@ p {
     /* Define um display flex */
     flex-direction: row;
     /* Define a direção da flexão como linha */
+    justify-content: center;
 }
 
 /* Estilos para os links */

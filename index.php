@@ -1,36 +1,4 @@
 <?php
-/*
-// Inicia a sessão
-session_start();
-
-// Função para sanitizar entradas
-function sanitizar($data) {
-    return htmlspecialchars(trim($data), ENT_QUOTES, 'UTF-8');
-}
-
-// Verifica se o formulário foi enviado
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    // Verifica se o botão de login foi clicado
-    if (isset($_POST['login'])) {
-        // Captura o CPF e a senha enviados pelo formulário e os sanitiza
-        $cpf = isset($_POST['cpf']) ? sanitizar($_POST['cpf']) : '';
-        $senha = isset($_POST['senha']) ? sanitizar($_POST['senha']) : '';
-
-        // Verifica as credenciais (use credenciais fictícias para demonstração)
-        if ($cpf === "123" && $senha === "123") {
-            // Armazena o nome na sessão (substituir "Usuário Teste" por uma lógica real)
-            $_SESSION['usuario'] = "Chicoiins";
-
-            // Redireciona para a página principal
-            header('Location: pagPrincipal.php');
-            exit;
-        } else {
-            // Exibe uma mensagem de erro caso as credenciais estejam erradas
-            $erro = "CPF ou senha incorretos!";
-        }
-    }
-}
-*/
     // Inicia a sessão
     session_start();
                             
@@ -43,11 +11,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $cpf = $_POST['cpf']; 
             $senha = $_POST['senha']; 
 
-            // Verifica as credenciais (use credenciais fictícias para demonstração)
             if ($cpf === "123" && $senha === "123") {
-                // Armazena o nome na sessão (substituir "Usuário Teste" por uma lógica real)
-                $_SESSION['usuario'] = "Chicoiins";
-
+                $_SESSION['usuario'] = "usuarioTeste";
                 // Redireciona para a página principal
                 header('Location: pagPrincipal.php');
                 exit;
@@ -58,11 +23,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         endif;
     }
 ?>
-
-
-<?php /*if (isset($erro)): ?>
-    <p style="color: red;"><?php echo htmlspecialchars($erro, ENT_QUOTES, 'UTF-8'); ?></p>
-<?php endif; */?>
 
 
 <!DOCTYPE html>
@@ -103,7 +63,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                             <a href="recpSenha.php" id="linkA">Esqueci minha senha</a>
                         </div>
                         <?php if(!empty($erro)): ?>
-                        <p style="color: red;"><?php echo $erro[0]; ?></p>
+                            <p style="color: red;"><?php echo $erro[0]; ?></p>
                         <?php endif; ?>
                         <div class="navtxt-link"><a href="cadastro.php">Não possui conta? <strong>Crie uma aqui</strong></a></div>
                     </form>
