@@ -46,10 +46,6 @@
             <div id="und">
                 <p><b>Unidade:</b> UBS Feu Rosa</p>
             </div>
-            
-            <div id="sala">
-                <p><b>Sala de atendimento:</b> 14A</p>
-            </div>
         </div>
 
         <!--Botoes para permitir que o usuario volte a pagina anterior ou cancele a consulta-->
