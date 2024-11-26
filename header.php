@@ -22,7 +22,7 @@
                     <a class="nav-link active" href="perfil.php">Perfil</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" href="index.php">Sair</a>
+                    <a class="nav-link active" href="logout.php">Sair</a>
                 </li>
             </ul>
         </div>

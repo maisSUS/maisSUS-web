@@ -1,3 +1,17 @@
+<?php
+  // Inicia a sessão
+  session_start();
+
+  // Verifica se o usuário está logado
+  if (!isset($_SESSION['usuario'])) {
+      // Redireciona para a tela de login se o usuário não estiver logado
+      header('Location: login.php');
+      exit;
+  }
+
+  // Captura o nome do usuário da sessão
+  $usuario = $_SESSION['usuario'];
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -22,8 +36,7 @@
     ?>
   <!-- Corpo da página -->
   <div class="body">
-
-
+    <h1 style="margin-left: 1em; margin-top:0.5em">Bem-vindo, <?php echo htmlspecialchars($usuario); ?>!</h1>
     <!-- Container principal -->
     <div class="container">
       <!-- Primeira coluna de links -->
