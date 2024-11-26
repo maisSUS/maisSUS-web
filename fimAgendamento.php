@@ -15,6 +15,7 @@
     <section>
         <h1>DADOS DA CONSULTA</h1>
         <div class="conteudo">
+            <h2>Confira seus dados:</h2>
             <p><strong>Paciente:</strong> Francisco Veiga</p>
             <p><strong>Profissional:</strong> Dentista</p>
             <p><strong>Especialidade:</strong> Ana Paula Silva</p>
