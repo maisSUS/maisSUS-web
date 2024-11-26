@@ -223,11 +223,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     <p><a href="index.php" id="link">Faça o login</a></p>
                 </div>
             </div>
-
-            <!-- Exibição de mensagem de erro ou sucesso -->
-            <!-- <?php /*if (!empty($mensagem)): */?>
-                <p style="color: red;"><?php /*echo htmlspecialchars($mensagem, ENT_QUOTES, 'UTF-8'); */?></p>
-            <?php /*endif;*/ ?> -->
         </form>
     </div>
 
@@ -274,7 +269,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
             valor = valor.slice(0,14);
             e.target.value = valor;
-
         })
     </script>
 </body>
