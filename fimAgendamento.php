@@ -13,15 +13,14 @@
         include 'header.php';
     ?>
     <section>
-        <h1>Confira seus dados:</h1>
+        <h1>DADOS DA CONSULTA</h1>
         <div class="conteudo">
-            <p style="font-weight: bolder;">DADOS DA CONSULTA</p>
-            <p>Paciente: Francisco Veiga</p>
-            <p>Profissional: Dentista</p>
-            <p>Especialidade: Ana Paula Silva</p>
-            <p>Data da consulta: 02/02/2025</p>
-            <p>Horário: 09:00</p>
-            <p>Unidade: UBS Feu Rosa</p>
+            <p><strong>Paciente:</strong> Francisco Veiga</p>
+            <p><strong>Profissional:</strong> Dentista</p>
+            <p><strong>Especialidade:</strong> Ana Paula Silva</p>
+            <p><strong>Data da consulta:</strong> 02/02/2025</p>
+            <p><strong>Horário:</strong> 09:00</p>
+            <p><strong>Unidade:</strong> UBS Feu Rosa</p>
             <div class="centralizar">
                 <button type="button" class="voltarbtn" id="btns" onclick="history.back()">Voltar</button>
                 <a class="botao" href="pagPrincipal.php" id="btns">Finalizar Agendamento</a>
