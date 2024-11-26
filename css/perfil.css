@@ -181,3 +181,6 @@ i {
     /* Largura máxima */
 }
 
+.cpf{
+    text-transform: uppercase;
+}

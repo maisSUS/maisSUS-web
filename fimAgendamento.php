@@ -18,9 +18,10 @@
             <p style="font-weight: bolder;">DADOS DA CONSULTA</p>
             <p>Paciente: Francisco Veiga</p>
             <p>Profissional: Dentista</p>
-            <p>Data da consulta: XX/XX/XXXX</p>
-            <p>Horário: XX:XX</p>
-            <p>Unidade:</p>
+            <p>Especialidade: Ana Paula Silva</p>
+            <p>Data da consulta: 02/02/2025</p>
+            <p>Horário: 09:00</p>
+            <p>Unidade: UBS Feu Rosa</p>
             <div class="centralizar">
                 <button type="button" class="voltarbtn" id="btns" onclick="history.back()">Voltar</button>
                 <a class="botao" href="pagPrincipal.php" id="btns">Finalizar Agendamento</a>

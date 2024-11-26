@@ -38,17 +38,17 @@
                 <div class="data">
                     <div class="data-left">
                         <p id="nav-subtitles">Nome Completo</p>
-                        <p id="nav-txt">Francisco Veiga</p>
-                        <p id="nav-subtitles">CPF</p>
+                        <p id="nav-txt">Francisco Veiga Santos</p>
+                        <p id="nav-subtitles" class="cpf">cpf</p>
                         <p id="nav-txt">160.616.570-48</p>
                         <p id="nav-subtitles">Cartão Nacional de Saúde</p>
-                        <p id="nav-txt">754.891.263.781</p>
+                        <p id="nav-txt">754891263781234</p>
                     </div>
                     <div class="data-right">
                         <p id="nav-subtitles">E-mail</p>
-                        <p id="nav-txt">eutentei@fuimlk.com.br</p>
+                        <p id="nav-txt">eutentei@fuimlk.com</p>
                         <p id="nav-subtitles">Telefone</p>
-                        <p id="nav-txt">(XX) XXXXX-XXXX</p>
+                        <p id="nav-txt">(27) 99123-4567</p>
                         <div id="nav-button">
                             <button type="submit" class="green-button" id="altDados">Alterar dados</button>
                         </div>

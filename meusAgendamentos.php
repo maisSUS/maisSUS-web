@@ -87,7 +87,7 @@
             <div class="container">
                 <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">×</span>
                 <h1>Cancelar Consulta</h1>
-                <p>Tem certeza que você deseja cancelar a sua consulta com o [especialista]?</p>
+                <p>Tem certeza que você deseja cancelar a sua consulta com [especialidade]?</p>
                 <p><b>Data da consulta:</b> dd/mm/yyyy</p>
                 <p><b>Nome do médico:</b> Fulano</p>
                 
