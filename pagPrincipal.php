@@ -36,7 +36,7 @@
     ?>
   <!-- Corpo da página -->
   <div class="body">
-    <h1 style="margin-left: 1em; margin-top:0.5em">Bem-vindo, <?php echo htmlspecialchars($usuario); ?>!</h1>
+    <h1 style="margin-left: 1em; margin-top:0.5em; font-weight: normal;">Bem-vindo, <?php echo htmlspecialchars($usuario); ?>!</h1>
     <!-- Container principal -->
     <div class="container">
       <!-- Primeira coluna de links -->
