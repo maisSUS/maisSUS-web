@@ -5,35 +5,6 @@ function sanitizar($data) {
     return filter_var(trim($data), FILTER_SANITIZE_SPECIAL_CHARS);
 }
 
-// Mensagem de erro ou sucesso
-$mensagem = '';
-
-// Verifica se o formulário foi enviado
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    // Sanitiza e valida os campos
-    $nome = isset($_POST['nome']) ? sanitizar($_POST['nome']) : '';
-    $cpf = isset($_POST['cpf']) ? sanitizar($_POST['cpf']) : '';
-    $cartao_sus = isset($_POST['cartao_sus']) ? sanitizar($_POST['cartao_sus']) : '';
-    $telefone = isset($_POST['telefone']) ? sanitizar($_POST['telefone']) : '';
-    $email = isset($_POST['email']) ? sanitizar($_POST['email']) : '';
-    $senha = isset($_POST['senha']) ? sanitizar($_POST['senha']) : '';
-    $confirma_senha = isset($_POST['confirma_senha']) ? sanitizar($_POST['confirma_senha']) : '';
-
-    // Validação básica dos campos obrigatórios
-    if (empty($nome) || empty($cpf) || empty($cartao_sus) || empty($telefone) || empty($email) || empty($senha) || empty($confirma_senha)) {
-        $mensagem = "Todos os campos marcados com * são obrigatórios.";
-    } elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        // Valida se o e-mail tem um formato válido
-        $mensagem = "Por favor, insira um e-mail válido.";
-    } elseif ($senha !== $confirma_senha) {
-        // Verifica se as senhas coincidem
-        $mensagem = "As senhas não coincidem.";
-    } else {
-        // Aqui você incluiria a lógica para salvar os dados no banco de dados
-        $mensagem = "Cadastro realizado com sucesso!";
-    }
-}
-
 // Verifica se o formulário foi enviado
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (isset($_POST['cadastrar'])) {
@@ -124,7 +95,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="js/acessibilidadeBarra.js" defer></script> 
     <!-- Referência ao arquivo JavaScript para validar os inputs (com o atributo defer para carregar após o HTML) -->
-    <!-- <script src="js/cadastrar.js" defer></script> -->
+    <script src="js/cadastrar.js" defer></script>
 </head>
 
 <body>
@@ -225,52 +196,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             </div>
         </form>
     </div>
-
-    <script>
-        const telefoneInput = document.getElementById('inTel');
-
-        telefoneInput.addEventListener('input', function (e) {
-            let valor = e.target.value;
-
-            // Remove todos os caracteres não numéricos
-            valor = valor.replace(/\D/g, '');
-
-            // Adiciona a formatação passo a passo
-            if (valor.length > 0) {
-                valor = '(' + valor;
-            }
-            if (valor.length > 3) {
-                valor = valor.slice(0, 3) + ') ' + valor.slice(3);
-            }
-            if (valor.length > 10) {
-                valor = valor.slice(0, 10) + '-' + valor.slice(10);
-            }
-
-            // Limita o valor ao tamanho máximo permitido (15 caracteres formatados)
-            valor = valor.slice(0, 15);
-
-            // Atualiza o campo com o valor formatado
-            e.target.value = valor;
-        });
-
-        const cpfInput = document.getElementById('inCpf');
-        cpfInput.addEventListener('input', function (e) {
-            let valor = e.target.value;
-            valor = valor.replace(/\D/g, '');
-            if (valor.length > 3){
-                valor = valor.slice(0,3) + '.' + valor.slice(3);
-            }
-            if (valor.length > 7){
-                valor = valor.slice(0,7) + '.' + valor.slice(7);
-            }
-            if (valor.length > 11){
-                valor = valor.slice(0,11) + '-' + valor.slice(11);
-            }
-
-            valor = valor.slice(0,14);
-            e.target.value = valor;
-        })
-    </script>
 </body>
 
 </html>
