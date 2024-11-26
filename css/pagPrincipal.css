@@ -1,6 +1,6 @@
 /* Estilos para o container */
 .container {
-    padding: 7em;
+    padding: 6em;
     /* Adiciona um preenchimento interno */
     display: flex;
     /* Usa um layout flexível */
