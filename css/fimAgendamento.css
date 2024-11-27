@@ -33,6 +33,11 @@ h1{
     font-size: 2em;
     text-align: center;
 }
+
+h2{
+    margin-bottom: 0.5em;
+}
+
 .botao, .voltarbtn{
     padding: 0.6em 0;
     width: 12vw;
@@ -45,10 +50,20 @@ h1{
 .botao{ 
     margin-left: 3em;
 }
+
 .centralizar {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     margin-top: 1em;
-  }
+}
+
+.esquerda{
+    text-align:left;
+    justify-content: left;
+}
+
+p{
+    margin-top: 0.3em;
+}
