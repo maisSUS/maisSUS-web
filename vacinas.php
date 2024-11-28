@@ -24,6 +24,7 @@
         <section>
             <div class="unidades">
                 <!-- Lista de Vacinas com nome das doenças que tratam -->
+                 <!-- bloco esquerdo -->
                 <div>
                     <div class="vacina">
                         <i class='bx bx-injection'></i>
@@ -44,6 +45,8 @@
                         <a href="infoVac.php">Detalhes</a>
                     </div>
                 </div>
+
+                <!-- bloco direito -->
                 <div>
                     <div class="vacina">
                         <i class='bx bx-injection'></i>

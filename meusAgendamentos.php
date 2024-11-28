@@ -21,7 +21,10 @@
         <!--Seta para volta-->
         <i class='bx bx-arrow-back' id="setaagd" onclick="Principal()"><p id="pSeta">Meus agendamentos</p></i>
 
+        <!-- titulo -->
         <h1>Consulte ou cancele seus agendamentos</h1>
+        
+        <!-- lista de agendamentos -->
         <div class="lista">
 
             <!--Bloco com as informacoes principais de cada agendamento-->
@@ -81,7 +84,7 @@
 
     </section>
 
-    <!--Janela que aparece ao apertar em cancelar e garante que ele realmente quer cancelar a consulta-->
+    <!--Janela que aparece ao apertar em cancelar e garante que o usuario realmente quer cancelar a consulta-->
     <div id="id01" class="modal">
         <form class="modal-content">
             <div class="container">
@@ -101,7 +104,7 @@
         </form>
     </div>
 
-    <!--Informa a consulta foi cancelada com sucesso-->
+    <!--Modal que informa que a consulta foi cancelada com sucesso-->
     <div id="id02" class="modal">
         <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">×</span>
         <form class="modal-content">

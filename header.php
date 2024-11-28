@@ -27,10 +27,10 @@
             </ul>
         </div>
         <!--Botões da barra de acessibilidade-->
-        <button class="decreaseFont">A-</button>
-        <button class="increaseFont">A+</button>
-        <button class="blackBg">A</button>
-        <button class="yellowBg">A</button>
-        <button class="dislexia">A</button>
+        <button class="decreaseFont" title="diminuir fonte">A-</button>
+        <button class="increaseFont" title="aumentar fonte">A+</button>
+        <button class="blackBg" title="modo escuro">A</button>
+        <button class="yellowBg" title="alto-contraste">A</button>
+        <button class="dislexia" title="fonte para disléxicos">A</button>
 
     </header>

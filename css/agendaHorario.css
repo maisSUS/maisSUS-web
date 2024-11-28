@@ -1,57 +1,4 @@
-.agendamento {
-    display: flex;
-}
-
-.escolheHora > div {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.item-EscolheHora{
-    margin: 0.2em;
-    color: white;
-    background-color: #989b9a;
-    padding: 0.5em;
-    border-radius: 10px;
-}
-
-.item-EscolheHora:hover{
-    background-color:#54615f;
-}
-
-.escolheHora{
-    margin: 0 2em;
-    min-width: 12em;
-}
-
-.item {
-    margin-bottom: 0.8rem;
-    font-size: 1.3em;
-    display: block;
-    width: 100%;
-    font-weight: bold;
-}
-
-.btnfinais {
-    margin-top: 3rem;
-    font-size: 1.2em;
-    padding: 0.5em;
-    color: white;
-    border: none;
-    border-radius: 10px;
-    background-color:#3C827A;
-}
-
-.btnfinais a{
-    font-size: 1.2rem;
-    color: white;
-}
-
-.botoes {
-    display: flex;
-    justify-content: space-between;
-}
-
+/* estilo da div com tudo, menos o titulo, da pag */
 .conteudo {
     padding: 1.5em;
     border: none;
@@ -64,6 +11,7 @@
     min-width: 40em
 }
 
+/* estilo da section */
 section{
     display: flex;
     flex-direction: column;
@@ -71,6 +19,78 @@ section{
     margin-top: 2em;
 }
 
+/* estilo do titulo */
+h1{
+    margin: 0 auto;
+    min-width: 50vw;
+    max-width: 60vw;
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+/* define o display */
+.agendamento {
+    display: flex;
+}
+
+/* estilo dos botoes de escolha dos horarios */
+.item-EscolheHora{
+    margin: 0.2em;
+    color: white;
+    background-color: #989b9a;
+    padding: 0.5em;
+    border-radius: 10px;
+}
+
+/* cor dos horarios ao passar o mouse por cima */
+.item-EscolheHora:hover{
+    background-color:#54615f;
+}
+
+.escolheHora{
+    margin: 0 2em;
+    min-width: 12em;
+}
+
+/* disposicao dos elementos com os horarios */
+.escolheHora > div {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.escolheHora > div > div{
+    cursor: pointer;
+}
+
+.item {
+    margin-bottom: 0.8rem;
+    font-size: 1.3em;
+    display: block;
+    width: 100%;
+    font-weight: bold;
+}
+
+/* estilo dos botoes, links-botoes*/
+.btnfinais {
+    margin-top: 3rem;
+    font-size: 1.2em;
+    padding: 0.5em;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    background-color:#3C827A;
+    a{
+    font-size: 1.2rem;
+    color: white;
+    }
+}
+
+.botoes {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* estilo do calendario */
 .calendar-container{
     min-width: 20em;
 }
@@ -85,16 +105,4 @@ section{
 
 .selHorario:hover{
     background-color: #3C827A;
-}
-
-.escolheHora > div > div{
-    cursor: pointer;
-}
-
-h1{
-    margin: 0 auto;
-    min-width: 50vw;
-    max-width: 60vw;
-    font-weight: bold;
-    font-size: 1.5em;
 }

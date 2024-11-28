@@ -40,43 +40,45 @@
     </head>
 
     <body>
-        <header>
-            <div id="container">
-                <div id="nav-bcg"></div>
-                <div id="nav-txt">
-                    <div id="logo">
-                        <p class="logo">+SUS</p>
-                    </div>
-                    <div id="title">
-                        <h1>Faça seu login</h1>
-                    </div>
-                    <!-- Formulário de login -->
-                    <form method="POST" action="">
-                        <div id="txtUser" class="navtxt-text">
-                            <label for="inID">CPF</label>
-                        </div>
-                        <div id="inUser" class="navtxt-text">
-                            <input type="text" id="inID" class="circle" name="cpf" placeholder="123.456.789-00">
-                        </div>
-                        <div id="txtPassword" class="navtxt-text">
-                            <label for="inSenha">Senha</label>
-                        </div>
-                        <div id="inPassword" class="navtxt-text">
-                            <input type="password" id="inSenha" class="circle" name="senha">
-                            <!-- Ícone de olho para mostrar/esconder a senha -->
-                            <img src="https://cdn0.iconfinder.com/data/icons/ui-icons-pack/100/ui-icon-pack-14-512.png" id="olho" class="olho" title="mostrar senha" alt="imagem clicável de um olho em preto e branco para mostrar a senha" tabindex="0">
-                        </div>
-                        <div id="btnEntrar" class="navtxt-button">
-                            <button type="submit" name="login" class="green-button">Entrar</button>
-                        </div>
-                        <?php if(isset($erro)): ?>
-                        <p style="color: red;"><?php echo $erro; ?></p>
-                        <?php endif; ?>
-                        <div class="navtxt-link"><a href="cadastro.php">Não possui conta? <strong>Crie uma aqui</strong></a></div>
-                    </form>
+        <div id="container">
+            <!-- div da area colorida -->
+            <div id="nav-bcg"></div>
+            <!-- div com o a parte não colorida da tela -->
+            <div id="nav-txt">
+                <div id="logo">
+                    <p class="logo">+SUS</p>
                 </div>
+                <div id="title">
+                    <h1>Faça seu login</h1>
+                </div>
+                <!-- Formulário de login -->
+                <form method="POST" action="">
+                    <div id="txtUser" class="navtxt-text">
+                        <label for="inID">CPF</label>
+                    </div>
+                    <div id="inUser" class="navtxt-text">
+                        <input type="text" id="inID" class="circle" name="cpf" placeholder="123.456.789-00">
+                    </div>
+                    <div id="txtPassword" class="navtxt-text">
+                        <label for="inSenha">Senha</label>
+                    </div>
+                    <div id="inPassword" class="navtxt-text">
+                        <input type="password" id="inSenha" class="circle" name="senha">
+                        <!-- Ícone de olho para mostrar/esconder a senha -->
+                        <img src="https://cdn0.iconfinder.com/data/icons/ui-icons-pack/100/ui-icon-pack-14-512.png" id="olho" class="olho" title="mostrar senha" alt="imagem clicável de um olho em preto e branco para mostrar a senha" tabindex="0">
+                    </div>
+                    <div id="btnEntrar" class="navtxt-button">
+                        <button type="submit" name="login" class="green-button">Entrar</button>
+                    </div>
+                    <?php 
+                        // Exibe a mensagem de erro caso algum seja detectado na validação
+                        if(isset($erro)): 
+                    ?>
+                    <p style="color: red;"><?php echo $erro; ?></p>
+                    <?php endif; ?>
+                    <div class="navtxt-link"><a href="cadastro.php">Não possui conta? <strong>Crie uma aqui</strong></a></div>
+                </form>
             </div>
-        </header>
+        </div>
     </body>
-
 </html>

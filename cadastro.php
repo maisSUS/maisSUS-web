@@ -1,14 +1,17 @@
 <?php
+// inicia sessão
 session_start();
+
 // Função para sanitizar entradas usando FILTER_SANITIZE_SPECIAL_CHARS
 function sanitizar($data) {
     return filter_var(trim($data), FILTER_SANITIZE_SPECIAL_CHARS);
 }
 
-// Verifica se o formulário foi enviado
+// Condição que verifica se o formulário foi enviado
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (isset($_POST['cadastrar'])) {
-        $erros = array();
+        $erros = array(); //array para guardar os erros, a fim de imprimi-los na tela depois
+        //variaveis para armazenar os dados digitados no formulário
         $nome = sanitizar($_POST['nome']);
         $cpf = sanitizar($_POST['cpf']);
         $cartaoSus = sanitizar($_POST['cartaoSus']);
@@ -17,7 +20,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $senha = sanitizar($_POST['senha']);
         $confSenha = sanitizar($_POST['confSenha']);
 
-        // Validações específicas
+        // Validações
+        //Validação do nome
         $expNm = array("options" => array("regexp" => "/^[a-zA-Z' ']+$/"));
         if (empty($nome)) {
             $erros["nome"] = "O nome completo é obrigatório *";
@@ -25,6 +29,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $erros["nome"] = "O nome deve possuir somente letras";
         }
 
+        //Validação do CPF
         $expCpf = array("options" => array("regexp" => "/^\d{3}\.\d{3}\.\d{3}-\d{2}$/"));
         if (empty($cpf)) {
             $erros["cpf"] = "O cpf é obrigatório *";
@@ -32,6 +37,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $erros["cpf"] = "O CPF deve possuir o formato 123.456.789-00";
         }
 
+        //Validação do Cartão do SUS
         $expSus = array("options" => array("regexp" => "/^\d{15}$/"));
         if (empty($cartaoSus)) {
             $erros["cartaoSus"] = "O cartão do SUS é obrigatório *";
@@ -39,6 +45,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $erros["cartaoSus"] = "O cartão do SUS deve possuir quinze números consecutivos";
         }
 
+        //Validação do telefone
         $expTel = array("options" => array("regexp" => "/^\(\d{2}\) \d{5}-\d{4}$/"));
         if (empty($telefone)) {
             $erros["tel"] = "O telefone é obrigatório *";
@@ -46,12 +53,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $erros["tel"] = "O telefone deve possuir o formato (DDD) 12345-6789";
         }
 
+        //Validação do email
         if (empty($email)) {
             $erros["email"] = "O email é obrigatório *";
         } elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
             $erros["email"] = "O email deve ser no formato nome@dominio.com";
         }
 
+        //Validação da senha
         $expSenha = array("options" => array("regexp" => "/^(?=.*[A-Z]).{5,}$/"));
         if (empty($senha)) {
             $erros["senha"] = "A senha é obrigatória *";
@@ -59,6 +68,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $erros["senha"] = "A senha deve ter mais que 4 caracteres e conter uma letra maiúscula";
         }
 
+        //Validação da confirmação da senha
         if (!isset($erros["senha"]) && empty($confSenha)) {
             $erros["confSenha"] = "Confirmar a senha é obrigatório *";
         } elseif (isset($erros["senha"]) && $senha == $confSenha) {
@@ -67,7 +77,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $erros["confSenha"] = "As senhas não correspondem *";
         }
 
+        // Se não houver erros, redireciona para a página principal com os dados preenchidos
         if (empty($erros)) {
+            //guarda o nome do usuario na sessao
             $_SESSION['usuario'] = $nome;
             header('Location: pagPrincipal.php');
             exit;
@@ -118,7 +130,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <!-- Título do formulário de cadastro -->
         <h1>Crie uma conta</h1>
 
-        <form method="post" action="cadastrophp.php">
+        <!-- Formulario enviado por post -->
+        <form method="post" action="">
             <!-- Divisão para os campos de entrada -->
             <div class="inputs">
                 <!-- Lado esquerdo dos campos de entrada -->
@@ -127,6 +140,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     <!-- Campo de entrada para o nome -->
                     <p><input type="text" placeholder="Nome" id="inNome" class="circle" name="nome"></p>
                     <?php
+                        //verifica se algum erro foi detectado na validação do nome
                         if(isset($erros["nome"])){
                     ?>
                     <p class='error' style="color: red; font-size: 0.7em; margin-bottom: 0.5em;"><?php echo $erros['nome'];?></p>
@@ -135,6 +149,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     <label for="inCpf">CPF</label><br>
                     <p><input type="text" placeholder="123.456.789-00" id="inCpf" class="circle" name="cpf"></p>
                     <?php
+                        //verifica se algum erro foi detectado na validação do cpf
                         if(isset($erros["cpf"])){
                     ?>
                     <p class='error' style="color: red; font-size: 0.7em; margin-bottom: 0.5em;"><?php echo $erros['cpf'];?></p>
@@ -143,6 +158,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     <label for="inSus">Cartão do SUS</label><br>
                     <p><input type="text" placeholder="123456789123456" id="inSus" class="circle" name="cartaoSus"></p>
                     <?php
+                        //verifica se algum erro foi detectado na validação do cartao
                         if(isset($erros["cartaoSus"])){
                     ?>
                     <p class='error' style="color: red; font-size: 0.7em; margin-bottom: 0.5em;"><?php echo $erros['cartaoSus'];?></p>
@@ -151,6 +167,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     <label for="inTel">Telefone</label><br>
                     <p><input type="text" placeholder="(DDD) 12345-6789" id="inTel" class="circle" name="telefone"></p>
                     <?php
+                        //verifica se algum erro foi detectado na validação do telefone
                         if(isset($erros["tel"])){
                     ?>
                     <p class='error' style="color: red; font-size: 0.7em; margin-bottom: 0.5em;"><?php echo $erros['tel'];?></p>
@@ -163,6 +180,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     <label for="inEmail">E-mail</label><br>
                     <p><input type="email" placeholder="nome@dominio.com" id="inEmail" class="circle" name="email"></p>
                     <?php
+                        //verifica se algum erro foi detectado na validação do email
                         if(isset($erros["email"])){
                     ?>
                     <p class='error' style="color: red; font-size: 0.7em; margin-bottom: 0.5em;"><?php echo $erros['email'];?></p>
@@ -171,6 +189,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     <label for="inPssw">Senha</label><br>
                     <p><input type="password" placeholder="***********" id="inPssw" class="circle" name="senha"></p>
                     <?php
+                        //verifica se algum erro foi detectado na validação da senha
                         if(isset($erros["senha"])){
                     ?>
                     <p class='error' style="color: red; font-size: 0.7em; margin-bottom: 0.5em;"><?php echo $erros['senha'];?></p>
@@ -179,6 +198,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     <label for="inCfmPssw">Confirmar senha</label><br>
                     <p><input type="password" placeholder="***********" id="inCfmPssw" class="circle" name="confSenha"></p>
                     <?php
+                        //verifica se algum erro foi detectado na validação da confirmação da senha
                         if(isset($erros["confSenha"])){
                     ?>
                     <p class='error' style="color: red; font-size: 0.7em; margin-bottom: 0.5em;"><?php echo $erros['confSenha'];?></p>

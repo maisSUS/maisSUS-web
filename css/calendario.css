@@ -1,9 +1,12 @@
+/* Reset geral para remover margens e 
+preenchimentos padrão de todos os elementos */
 * {
 	margin: 0;
 	padding: 0;
 	font-family: 'Poppins', sans-serif;
 }
 
+/* Estilização principal do contêiner do calendário */
 .calendar-container {
 	background: #e2f8f4;
     width: 25em;
@@ -11,6 +14,7 @@
     box-shadow: 0em 0em 0.3em 0.1em rgba(0, 0, 0, 0.05);
 }
 
+/* Estilo do cabeçalho do calendário */
 .calendar-container header {
 	display: flex;
 	align-items: center;
@@ -18,10 +22,12 @@
 	justify-content: space-between;
 }
 
+/* Estiliza o contêiner de navegação do calendário */
 header .calendar-navigation {
 	display: flex;
 }
 
+/* Botões de navegação para alterar o mês */
 header .calendar-navigation span {
 	height: 38px;
 	width: 38px;
@@ -35,23 +41,28 @@ header .calendar-navigation span {
 	font-size: 1.9rem;
 }
 
+/* Remove a margem extra do botão de navegação direito */
 .calendar-navigation span:last-child {
 	margin-right: -10px;
 }
 
+/* Cor de fundo ao passar o mouse sobre os botões de navegação */
 header .calendar-navigation span:hover {
 	background: #b8d6cd;
 }
 
+/* Estilo do texto que exibe a data atual */
 header .calendar-current-date {
 	font-weight: 500;
 	font-size: 1.45rem;
 }
 
+/* Corpo do calendário que contém os dias */
 .calendar-body {
 	padding: 20px;
 }
 
+/* Remove marcadores das listas e organiza os elementos */
 .calendar-body ul {
 	list-style: none;
 	flex-wrap: wrap;
@@ -59,21 +70,25 @@ header .calendar-current-date {
 	text-align: center;
 }
 
+/* Espaçamento inferior na lista de dias do mês */
 .calendar-body .calendar-dates {
 	margin-bottom: 20px;
 }
 
+/* Itens das listas (dias da semana e dias do mês) */
 .calendar-body li {
 	width: calc(100% / 7);
 	font-size: 1.07rem;
 	color: #414141;
 }
 
+/* Estilo dos dias da semana (Dom, Seg, etc.) */
 .calendar-body .calendar-weekdays li {
 	cursor: default;
 	font-weight: 500;
 }
 
+/* Estilo dos dias do mês */
 .calendar-body .calendar-dates li {
 	margin-top: 30px;
 	position: relative;
@@ -81,14 +96,17 @@ header .calendar-current-date {
 	cursor: pointer;
 }
 
+/* Estilo para dias inativos (fora do mês atual) */
 .calendar-dates li.inactive {
 	color: #aaa;
 }
 
+/* Estilo para o dia ativo/selecionado */
 .calendar-dates li.active {
 	color: #fff;
 }
 
+/* Pseudo-elemento decorativo circular para os dias */
 .calendar-dates li::before {
 	position: absolute;
 	content: "";
@@ -101,10 +119,12 @@ header .calendar-current-date {
 	transform: translate(-50%, -50%);
 }
 
+/* Cor de fundo para o dia ativo/selecionado */
 .calendar-dates li.active::before {
 	background: #3C827A;
 }
 
+/* Cor de fundo ao passar o mouse sobre dias não ativos */
 .calendar-dates li:not(.active):hover::before {
 	background: #b8d6cd;
 }

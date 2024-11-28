@@ -1,9 +1,10 @@
 // JS da Tela de Calendário via Web
-
+// Obtém a data atual
 let date = new Date();
 let year = date.getFullYear();
 let month = date.getMonth();
 
+// Seleciona elementos HTML relevantes
 const day = document.querySelector(".calendar-dates");
 const currdate = document.querySelector(".calendar-current-date");
 const prenexIcons = document.querySelectorAll(".calendar-navigation span");
@@ -24,33 +25,33 @@ const months = [
 	"Dezembro"
 ];
 
-// Funcao que cria o calendario
+// Função que cria e manipula o calendário
 const manipulate = () => {
 
-	// Get the first day of the month
+	// Obtém o índice do primeiro dia do mês (0 = domingo, 1 = segunda, etc.)
 	let dayone = new Date(year, month, 1).getDay();
 
-	// Get the last date of the month
+	// Obtém o último dia do mês (número total de dias no mês)
 	let lastdate = new Date(year, month + 1, 0).getDate();
 
-	// Get the day of the last date of the month
+	// Obtém o índice do dia do último dia do mês
 	let dayend = new Date(year, month, lastdate).getDay();
 
-	// Get the last date of the previous month
+	// Obtém o último dia do mês anterior
 	let monthlastdate = new Date(year, month, 0).getDate();
 
-	// Variable to store the generated calendar HTML
+	// Variável que armazenará o HTML gerado para o calendário
 	let lit = "";
 
-	// Loop to add the last dates of the previous month
+	// Adiciona os últimos dias do mês anterior como "inativos"
 	for (let i = dayone; i > 0; i--) {
 		lit += `<li class="inactive">${monthlastdate - i + 1}</li>`;
 	}
 
-	// Loop to add the dates of the current month
+	// Adiciona os dias do mês atual
 	for (let i = 1; i <= lastdate; i++) {
 
-		// Check if the current date is today
+		// Verifica se a data atual é hoje
 		let isToday = i === date.getDate()
 			&& month === new Date().getMonth()
 			&& year === new Date().getFullYear()
@@ -59,54 +60,48 @@ const manipulate = () => {
 		lit += `<li class="${isToday}">${i}</li>`;
 	}
 
-	// Loop to add the first dates of the next month
+	// Adiciona os primeiros dias do próximo mês como "inativos"
 	for (let i = dayend; i < 6; i++) {
 		lit += `<li class="inactive">${i - dayend + 1}</li>`
 	}
 
-	// Update the text of the current date element 
-	// with the formatted current month and year
+	// Atualiza o texto do elemento com o mês e o ano atual formatados
 	currdate.innerText = `${months[month]} ${year}`;
 
-	// update the HTML of the dates element 
-	// with the generated calendar
+	// Atualiza o HTML do container de datas com o calendário gerado
 	day.innerHTML = lit;
 }
 
+// chamamento da funcao para renderizar o calendario inicialmente
 manipulate();
 
-// Attach a click event listener to each icon
+// Adiciona um listener de clique para os ícones de navegação (próximo e anterior)
 prenexIcons.forEach(icon => {
 
-	// When an icon is clicked
+	// Quando um ícone é clicado
 	icon.addEventListener("click", () => {
-
-		// Check if the icon is "calendar-prev"
-		// or "calendar-next"
+		
+		// Verifica se o ícone clicado é "anterior" ou "próximo"
 		month = icon.id === "calendar-prev" ? month - 1 : month + 1;
 
-		// Check if the month is out of range
+		// Verifica se o mês está fora do intervalo permitido (0 a 11)
 		if (month < 0 || month > 11) {
 
-			// Set the date to the first day of the 
-			// month with the new year
+			// Ajusta a data para o primeiro dia do novo mês/ano
 			date = new Date(year, month, new Date().getDate());
 
-			// Set the year to the new year
+			// Atualiza o ano e o mês para os valores corretos
 			year = date.getFullYear();
-
-			// Set the month to the new month
 			month = date.getMonth();
 		}
 
 		else {
 
-			// Set the date to the current date
+			// Mantém a data como o dia atual
 			date = new Date();
 		}
 
-		// Call the manipulate function to 
-		// update the calendar display
+		// Chama a função para atualizar a exibição do calendário
 		manipulate();
 	});
 });

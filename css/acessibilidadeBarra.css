@@ -1,5 +1,4 @@
-@import url('https://fonts.cdnfonts.com/css/opendyslexic');
-
+/* Estilo dos botões de acessibilidade*/
 .decreaseFont, .increaseFont, .blackBg, .yellowBg, .dislexia{
   background: white;
   color: black;
@@ -14,50 +13,43 @@
   top: -3px;
 }
 
+/* cor do botao que deixa o fundo amarelo */
 button.yellowBg{
   background: yellow;
 }
 
+/* cor do botao que deixa o fundo preto */
 button.blackBg{
   background: black;
   color:white;
 }
 
+/* define a cor que o botao fica quando é hoverado */
 .dislexia:hover, .increaseFont:hover, .decreaseFont:hover, .blackBg:hover, .yellowBg:hover{
   background-color: #aaa;
 }
+
 
 .btnAcessibilidade{
   display: inline;
   margin-top: 1em;
 }
 
-.dislexia{
-  font-family: 'OpenDyslexic', sans-serif;
-  background: white;
-  color: black;
-  border: solid black 1px;
-  height: 50px;
-  width: 50px;
-  display:inline-block;
-  text-align: center;
-  transition: .3s;
-  font-size: 18px;
-  position: relative;
-  top: -1px;
-}
-
+/* define as alteracoes que ocorrerão ao clicar no botao de dislexia */
 .dislexiaMode{
   font-family: 'OpenDyslexic', sans-serif;
   src: url('http://dyslexicfonts.com/fonts/OpenDyslexic-Regular.otf');
   font-style: normal;
   font-weight: normal;
+
+  /* Alterando a fonte em todos os elementos necessarios */
   .container > div > a{
     p{
       font-family: 'OpenDyslexic', sans-serif;
 
     }
   }
+
   .nav, footer{
     p{
       font-family: 'OpenDyslexic', sans-serif;
@@ -181,6 +173,8 @@ button.blackBg{
     font-family: 'OpenDyslexic', sans-serif;
   }
 }
+
+
 /*acionado ao clicar em blackbg*/
 .blackMode{
   color:white;
@@ -323,6 +317,7 @@ button.blackBg{
   .agendamentos{
     border: solid white 1px;
   }
+
   .btnVerMais, .btnCancelar{
     background-color: black;
     color: white;
@@ -436,6 +431,7 @@ button.blackBg{
     color: yellow;
   }
 
+  /* caleendario */
   .calendar-container{
     background-color: yellow;
 

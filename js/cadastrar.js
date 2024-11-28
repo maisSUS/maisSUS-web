@@ -1,5 +1,7 @@
+//pega o telefone por id
 const telefoneInput = document.getElementById('inTel');
 
+// Adiciona evento para formatar o número de telefone ao digitar
 telefoneInput.addEventListener('input', function (e) {
     let valor = e.target.value;
 
@@ -24,7 +26,10 @@ telefoneInput.addEventListener('input', function (e) {
     e.target.value = valor;
 });
 
+//pega o cpf por id
 const cpfInput = document.getElementById('inCpf');
+
+// Adiciona evento para formatar o CPF ao digitar
 cpfInput.addEventListener('input', function (e) {
     let valor = e.target.value;
     valor = valor.replace(/\D/g, '');

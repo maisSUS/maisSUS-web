@@ -14,6 +14,7 @@
 
 <body>
     <?php
+        // Inclui o header com o menu e outras informações
         include 'header.php';
     ?>
 

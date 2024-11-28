@@ -74,7 +74,6 @@
                         <div class="item-EscolheHora" tabindex="0">13:00</div>
                         <div class="item-EscolheHora" tabindex="0">13:20</div>
                         <div class="item-EscolheHora" tabindex="0">13:40</div>
-                
                     </div>
                 </div>
             </div>

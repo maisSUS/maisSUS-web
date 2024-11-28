@@ -14,8 +14,10 @@
   ?>
 <!-- Sessão com as informações da unidade de Feu rosa -->
     <section>
+      <!-- titulo -->
       <h1 id="infoubs">Informações da unidade de saúde</h1>
       <div id="infoContainer">
+        <!-- informacoes da unidade -->
         <div>
           <h1>UBS Feu Rosa</h1><br>
           <p>Localização: Feu rosa, Serra</p>

@@ -1,5 +1,7 @@
+/* define o box-siizng de todos os elementos na pagina */
 * {box-sizing: border-box;}
 
+/* decora botoes no modal */
 .modal > button {
   background-color: #04AA6D;
   color: white;
@@ -15,6 +17,7 @@ button:hover{
   color: rgba(255, 255, 255, 0.753);
 }
 
+/* define posicionamento dos dois botoes */
 .cancelbtn, .deletebtn {
   float: left;
   width: 25%;

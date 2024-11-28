@@ -1,3 +1,5 @@
+/* Define o layout do container principal com flexbox em 
+coluna e centraliza o conteúdo */
 .conteudo {
     display: flex;
     flex-direction: column;
@@ -13,11 +15,11 @@
     max-width: 40vw;
 }
 
-
+/* Adiciona espaçamento inferior ao título dentro do container */
 .conteudo h1{
     margin-bottom: 0.5em;
 }
-
+/* Define o layout da section*/
 section{
     display: flex;
     flex-direction: column;
@@ -25,6 +27,7 @@ section{
     margin-top: 2em;
 }
 
+/*decora o titulo*/
 h1{
     margin: 0 auto;
     min-width: 50vw;
@@ -33,11 +36,13 @@ h1{
     font-size: 2em;
     text-align: center;
 }
+/*decora o subtitulo*/
 
 h2{
     margin-bottom: 0.5em;
 }
 
+/*estilo dos botões*/
 .botao, .voltarbtn{
     padding: 0.6em 0;
     width: 12vw;
@@ -47,9 +52,13 @@ h2{
     border-radius: 10px;
     background-color: #3C827A;
 }
+
+/* espacamento do botao */
 .botao{ 
     margin-left: 3em;
 }
+
+/* Define o layout do container dos botões com flexbox em linha */
 
 .centralizar {
     display: flex;
@@ -59,11 +68,12 @@ h2{
     margin-top: 1em;
 }
 
+/* Alinha o texto do lado esquerdo e ajusta a justificação */
 .esquerda{
     text-align:left;
     justify-content: left;
 }
-
+/* Adiciona margem superior aos parágrafos para espaçamento entre os itens */
 p{
     margin-top: 0.3em;
 }

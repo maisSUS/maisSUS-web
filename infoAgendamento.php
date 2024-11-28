@@ -14,6 +14,7 @@
     <?php
         include 'header.php';
     ?>
+    <!-- titulo -->
     <h1 class="o1">Informações do agendamento</h1>
     <section id="infoAgenda">
         
@@ -25,8 +26,6 @@
             <div id="paciente">
                 <p><b>Paciente:</b> Fulano da Silva Santo</p> 
             </div>
-
-            
 
             <div id="profissional">
                 <p><b>Profissional:</b> Luiza da Conceição Oliveira</p>
