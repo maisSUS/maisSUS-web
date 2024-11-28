@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 // Função para sanitizar entradas usando FILTER_SANITIZE_SPECIAL_CHARS
 function sanitizar($data) {
     return filter_var(trim($data), FILTER_SANITIZE_SPECIAL_CHARS);
@@ -68,6 +68,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         }
 
         if (empty($erros)) {
+            $_SESSION['usuario'] = $nome;
             header('Location: pagPrincipal.php');
             exit;
         }
@@ -117,7 +118,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <!-- Título do formulário de cadastro -->
         <h1>Crie uma conta</h1>
 
-        <form method="post" action="">
+        <form method="post" action="cadastrophp.php">
             <!-- Divisão para os campos de entrada -->
             <div class="inputs">
                 <!-- Lado esquerdo dos campos de entrada -->

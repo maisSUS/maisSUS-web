@@ -12,11 +12,6 @@
 </head>
 <body>
     <?php
-        // Função para sanitizar entradas utilizando FILTER_SANITIZE_SPECIAL_CHARS
-        function sanitizar($data) {
-            return filter_var(trim($data), FILTER_SANITIZE_SPECIAL_CHARS);
-        }
-
         // Incluindo o cabeçalho
         include 'header.php';
     ?>
@@ -49,11 +44,12 @@
                     <option value="exmMamog">Mamografia</option>
                 </select>
             </div>
-
+            <!-- botoes e modal -->
             <div class="botoes">
                 <button class="btnfinais" name="btnvoltar" id="btnvoltar" onclick="history.back()">Voltar</button>
                 <input type="button" value="Continuar" class="btnfinais" id="btncontinuar" onclick="document.getElementById('id01').style.display='block'">
                 <div id="id01" class="modal">
+                    <!-- modal -->
                     <form class="modal-content">
                         <div class="container">
                             <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">×</span>
@@ -61,6 +57,7 @@
                             <h1 id="aviso">ATENÇÃO!</h1>
                             <p>Para agendar essa consulta é necessário ter o<br>encaminhamento do clínico geral. Se já possui,<br>siga em frente. Se não possui, procure um clínico<br>geral antes.</p>
                             <div class="centralizar">
+                                <!-- botoes do modal -->
                                 <div class="clearfix">
                                     <button type="button" class="voltarbtn" onclick="document.getElementById('id01').style.display='none'">Voltar</button>
                                     <button type="button" class="avancarbtn" id="avancarbtn">Seguir em frente</button>
@@ -69,6 +66,7 @@
                         </div>
                     </form>
                 </div>
+                <!-- ação do botao seguir em frente -->
                 <script>
                     var avancar = document.getElementById("avancarbtn");
                     

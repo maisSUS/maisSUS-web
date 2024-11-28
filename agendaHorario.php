@@ -14,6 +14,7 @@
 </head>
 <body>
     <?php
+    //header da pagina
         include 'header.php';
     ?>
     
@@ -28,12 +29,13 @@
                     <div class="calendar-container" tabindex="0">
                         <header class="calendar-header">
                             <p class="calendar-current-date"></p>
+                            <!-- botoes de alterar o mes -->
                             <div class="calendar-navigation">
                                 <span id="calendar-prev" class="material-symbols-rounded" tabindex="0">chevron_left</span>
                                 <span id="calendar-next" class="material-symbols-rounded" tabindex="0">chevron_right</span>
                             </div>
                         </header>
-                
+                        <!-- dias da semana -->
                         <div class="calendar-body">
                             <ul class="calendar-weekdays">
                                 <li>Dom</li>
@@ -44,6 +46,7 @@
                                 <li>Sex</li>
                                 <li>Sab</li>
                             </ul>
+                            <!-- dias do mes -->
                             <ul class="calendar-dates"></ul>
                         </div>
                     </div>

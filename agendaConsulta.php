@@ -12,9 +12,11 @@
 </head>
 <body>
     <?php
+    //header da pagina
         include 'header.php';
     ?>
     <section>
+        <!-- titulo -->
         <h1 id="h1">Agendamento de Consulta</h1>
         <div class="conteudo">    
             
@@ -66,12 +68,14 @@
                 <button class="btnfinais" id="btnvoltar" onclick="history.back()">Voltar</button>
                 <input type="button" value="Continuar" class="btnfinais" id="btncontinuar" onclick="document.getElementById('id01').style.display='block'">
                 <div id="id01" class="modal">
+                    <!-- modal -->
                     <form class="modal-content">
                         <div class="container">
                             <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">×</span>
                             <i class='bx bx-error' ></i>
                             <h1 id="aviso">ATENÇÃO!</h1>
                             <p>Para agendar essa consulta é necessário ter o</br> encaminhamento do clínico geral. Se já possui,</br> siga em frente. Se não possui, procure um clínico</br> geral antes.</p>
+                            <!-- botoes do modal -->
                             <div class="centralizar">
                                 <div class="clearfix">
                                     <button type="button" class="voltarbtn" onclick="document.getElementById('id01').style.display='none'">Voltar</button>
@@ -81,6 +85,7 @@
                         </div>
                     </form>
                 </div>
+                <!-- funcao do botao seguir em frente -->
                 <script>
                     var avancar = document.getElementById("avancarbtn");
                     function continuar() {

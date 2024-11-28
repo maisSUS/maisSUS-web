@@ -1,11 +1,3 @@
-// Adiciona o evento de tecla pressionada para a tecla "Enter" para chamar a função cadastrar
-document.addEventListener('keypress', function (event) {
-  if (event.key == 'Enter') {
-    cadastrar();
-  }
-});
-
-
 const telefoneInput = document.getElementById('inTel');
 
 telefoneInput.addEventListener('input', function (e) {

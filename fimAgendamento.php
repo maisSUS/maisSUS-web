@@ -10,6 +10,7 @@
 </head>
 <body>
     <?php
+    // Inclui o cabeçalho da página
         include 'header.php';
     ?>
     <section>

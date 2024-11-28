@@ -108,6 +108,14 @@ section > div{
     align-items: center;
 }
 
+section h1{
+    margin: 0 auto;
+    min-width: 50vw;
+    max-width: 50vw;
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
 #infoContainer{
     overflow: hidden;
     padding: 2em 1em;
@@ -155,10 +163,9 @@ section > div{
 .btnVoltar:hover{
     background-color: #577b74;
 }
-#infoubs{
-    margin: 0 auto;
+/* #infoubs{
     min-width: 50vw;
     max-width: 60vw;
     font-weight: bold;
     font-size: 1.5em;
-}
+} */
