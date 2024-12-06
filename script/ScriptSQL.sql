@@ -1,15 +1,13 @@
-/* Lógico_1: */
+/* LÃ³gico_1: */
 
 CREATE TABLE LOGIN_USUARIO (
-    idLogin INT,
+    idUsuario INT PRIMARY KEY,
     senha VARCHAR(32),
     email VARCHAR(40),
     cartaoSus VARCHAR(30),
     nomeUsuario VARCHAR(40),
-    idUsuario INT,
     telUsuario VARCHAR(20),
     cpfUsuario VARCHAR(15),
-    PRIMARY KEY (idLogin, idUsuario)
 );
 
 CREATE TABLE AGENDAMENTO_CONSULTA (
