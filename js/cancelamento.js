@@ -26,3 +26,29 @@ function some(x){
     modal2.style.display = 'block'; // Exibe o segundo modal
   }
 }
+
+document.getElementById('cancelbtn').addEventListener('click', function () {
+  const itemId = this.getAttribute('data-id'); // Obtém o ID do item
+  excluirItem(itemId); // Chama a função para excluir
+});
+
+function excluirItem(id) {
+  fetch('/delete', {
+      method: 'POST',
+      headers: {
+          'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({ id: id }) // Envia o ID no corpo da requisição
+  })
+  .then(response => response.json())
+  .then(data => {
+      if (data.success) {
+          alert('Item excluído com sucesso!');
+      } else {
+          alert('Erro ao excluir o item.');
+      }
+  })
+  .catch(error => {
+      console.error('Erro:', error);
+  });
+}
