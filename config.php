@@ -1,8 +1,11 @@
 <?php 
+// Configurações do banco de dados
 define('DB_HOST', 'localhost');
 define('DB_USER', 'root');
 define('DB_PASS', 'usbw');
 define('DB_NAME', 'maissus');
+
+header('Content-Type: application/json');
 
 try {
     // Conectando ao banco de dados com PDO
@@ -11,7 +14,7 @@ try {
 
     // Obtém os dados enviados pelo frontend
     $data = json_decode(file_get_contents('php://input'), true);
-    $id = $data['id']; // ID do agendamento a ser excluído
+    $id = isset($data['id']) ? $data['id'] : null; // ID do agendamento a ser excluído
 
     // Valida o ID
     if (!$id) {
@@ -24,11 +27,15 @@ try {
     $stmt->bindParam(':id', $id, PDO::PARAM_INT);
     $stmt->execute();
 
-    // Retorna uma resposta de sucesso
-    echo json_encode(['success' => true]);
+    // Verifica se algum registro foi excluído
+    if ($stmt->rowCount() > 0) {
+        echo json_encode(['success' => true, 'message' => 'Item excluído com sucesso.']);
+    } else {
+        echo json_encode(['success' => false, 'message' => 'Nenhum registro encontrado para o ID fornecido.']);
+    }
 } catch (Exception $e) {
     // Retorna um erro em caso de falha
-    echo json_encode(['success' => false, 'message' => $e->getMessage()]);
+    echo json_encode(['success' => false, 'message' => 'Erro no servidor: ' . $e->getMessage()]);
 }
-
 ?>
+

@@ -32,23 +32,27 @@ document.getElementById('cancelbtn').addEventListener('click', function () {
   excluirItem(itemId); // Chama a função para excluir
 });
 
+
+// Função para excluir o item no backend
 function excluirItem(id) {
-  fetch('/delete', {
+  fetch('config.php', { // Caminho do arquivo PHP
       method: 'POST',
       headers: {
-          'Content-Type': 'application/json'
+          'Content-Type': 'application/json',
       },
-      body: JSON.stringify({ id: id }) // Envia o ID no corpo da requisição
+      body: JSON.stringify({ id: id }), // Envia o ID no corpo da requisição
   })
   .then(response => response.json())
   .then(data => {
       if (data.success) {
           alert('Item excluído com sucesso!');
+          location.reload(); // Recarrega a página para atualizar a lista
       } else {
-          alert('Erro ao excluir o item.');
+          alert('Erro ao excluir o item: ' + data.message);
       }
   })
   .catch(error => {
       console.error('Erro:', error);
+      alert('Erro no servidor.');
   });
 }
