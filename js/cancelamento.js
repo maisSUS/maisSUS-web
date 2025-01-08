@@ -35,6 +35,7 @@ document.getElementById('cancelbtn').addEventListener('click', function () {
 
 // Função para excluir o item no backend
 function excluirItem(id) {
+  console.log('ID enviado para exclusão:', id); // Log do ID no console
   fetch('config.php', { // Caminho do arquivo PHP
       method: 'POST',
       headers: {
