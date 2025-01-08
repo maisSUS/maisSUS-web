@@ -34,8 +34,10 @@ document.getElementById('cancelbtn').addEventListener('click', function () {
 
 
 // Função para excluir o item no backend
-function excluirItem(id) {
-  console.log('ID enviado para exclusão:', id); // Log do ID no console
+function excluirItem(buttonElement) {
+  const id = buttonElement.getAttribute('data-id'); // Obtém o ID do atributo data-id
+  console.log("ID enviado para exclusão:", id); // Para depuração
+
   fetch('config.php', { // Caminho do arquivo PHP
       method: 'POST',
       headers: {
@@ -43,17 +45,18 @@ function excluirItem(id) {
       },
       body: JSON.stringify({ id: id }), // Envia o ID no corpo da requisição
   })
-  .then(response => response.json())
-  .then(data => {
-      if (data.success) {
-          alert('Item excluído com sucesso!');
-          location.reload(); // Recarrega a página para atualizar a lista
-      } else {
-          alert('Erro ao excluir o item: ' + data.message);
-      }
-  })
-  .catch(error => {
-      console.error('Erro:', error);
-      alert('Erro no servidor.');
-  });
+      .then(response => response.json())
+      .then(data => {
+          if (data.success) {
+              alert('Item excluído com sucesso!');
+              location.reload(); // Recarrega a página
+          } else {
+              alert('Erro ao excluir o item: ' + data.message);
+          }
+      })
+      .catch(error => {
+          console.error('Erro:', error);
+          alert('Erro no servidor.');
+      });
 }
+

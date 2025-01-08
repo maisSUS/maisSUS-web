@@ -96,8 +96,8 @@
                 
                 <div class="centralizar">
                     <div class="clearfix">
-                        <button type="button" onclick="some(1)" class="deletebtn">Não</button>
-                        <button type="button" onclick="some(0)" class="cancelbtn" data-id="123">Sim</button>
+                    <button type="button" onclick="some(1)" class="deletebtn">Não</button>
+                    <button type="button" class="cancelbtn" data-id="123" onclick="excluirItem(this)">Sim</button>
                     </div>
                 </div>
             </div>
