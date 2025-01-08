@@ -81,7 +81,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         if (empty($erros)) {
             //guarda o nome do usuario na sessao
             $_SESSION['usuario'] = $nome;
-            header('Location: pagPrincipal.php');
+            $_SESSION['dados_form'] = $_POST;
+            header('Location: cadastrarUsuario.php');
             exit;
         }
     }
