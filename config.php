@@ -1,5 +1,5 @@
 <?php 
-// Configurações do banco de dados
+/*// Configurações do banco de dados
 define('DB_HOST', 'localhost');
 define('DB_USER', 'root');
 define('DB_PASS', 'usbw');
@@ -36,6 +36,27 @@ try {
 } catch (Exception $e) {
     // Retorna um erro em caso de falha
     echo json_encode(['success' => false, 'message' => 'Erro no servidor: ' . $e->getMessage()]);
+}
+    */
+// Configurações do banco de dados
+$host = 'localhost'; // Endereço do servidor do banco
+$dbname = 'maissus'; // Nome do banco de dados
+$username = 'root'; // Usuário do banco de dados
+$password = 'usbw'; // Senha do banco de dados
+
+try {
+    // Criar a conexão usando PDO
+    $conn = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8mb4", $username, $password,[
+        PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8mb4"
+    ]);
+
+    // Configurar o PDO para lançar exceções em caso de erro
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+    echo "Conexão bem-sucedida!";
+} catch (PDOException $e) {
+    // Tratar erros de conexão
+    echo "Erro ao conectar: " . $e->getMessage();
 }
 ?>
 

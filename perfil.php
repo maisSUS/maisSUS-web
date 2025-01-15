@@ -21,6 +21,9 @@
 <body>
     <?php
         include 'header.php';
+        include 'config.php';
+
+        
     ?>
 
     <!-- Container principal -->
@@ -50,6 +53,7 @@
                         <p id="nav-subtitles">Telefone</p>
                         <p id="nav-txt">(27) 99123-4567</p>
                         <div id="nav-button">
+                            <button type="submit" class="red-button" id="excluirDados">Excluir conta</button>
                             <button type="submit" class="green-button" id="altDados">Alterar dados</button>
                         </div>
                     </div>

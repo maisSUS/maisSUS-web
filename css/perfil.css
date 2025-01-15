@@ -103,6 +103,7 @@
     /* Tamanho da fonte */
     cursor: pointer;
     /* Cursor */
+    margin-left: 1em;   
 }
 
 .red-button {

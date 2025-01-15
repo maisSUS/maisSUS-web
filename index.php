@@ -1,4 +1,5 @@
 <?php
+    include 'config.php';
     // Inicia a sessão
     session_start();
                             
@@ -10,10 +11,17 @@
             $cpf = $_POST['cpf']; 
             $senha = $_POST['senha']; 
 
-            // Verifica as credenciais (use credenciais fictícias para demonstração)
-            if ($cpf === "123" && $senha === "123") {
-                // Armazena o nome na sessão (substituir "Usuário Teste" por uma lógica real)
-                $_SESSION['usuario'] = "Chicoiins";
+            // Consulta o banco de dados para verificar se o CPF existe
+            $sql = "SELECT * FROM LOGIN_USUARIO WHERE cpfUsuario = :cpf";
+            $stmt = $conn->prepare($sql);
+            $stmt->bindParam(':cpf', $cpf);
+            $stmt->execute();
+            
+            $usuario = $stmt->fetch(PDO::FETCH_ASSOC);
+            
+            if ($usuario && md5($senha) === $usuario['senha']) { // Verifica se a senha (MD5) é correta
+                // Armazena o nome na sessão
+                $_SESSION['usuario'] = $usuario['nomeUsuario'];
 
                 // Redireciona para a página principal
                 header('Location: pagPrincipal.php');
@@ -25,6 +33,8 @@
         endif;
     }
 ?>
+
+
     
 
 <!DOCTYPE html>
