@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Perfil</title>
+    <script src="js/alterarDados.js" defer></script>
+    <script src="js/excluirConta.js" defer></script> <!-- Link para o script de excluir conta -->
     <link rel="icon" href="img/serra.png">
     <link rel="stylesheet" href="css/navBar.css">
     <link rel="stylesheet" href="css/perfil.css">
@@ -38,6 +40,23 @@
             echo "Usuário não encontrado.";
             exit();
         }
+
+        // Processa a exclusão da conta
+        if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['excluir'])) {
+            // Excluir os dados do usuário
+            $deleteSql = "DELETE FROM LOGIN_USUARIO WHERE nomeUsuario = :usuario";
+            $deleteStmt = $pdo->prepare($deleteSql);
+            $deleteStmt->bindParam(':usuario', $nomeUsuario);
+
+            if ($deleteStmt->execute()) {
+                // Destrói a sessão e redireciona para a página de login
+                session_destroy();
+                header('Location: index.php');
+                exit();
+            } else {
+                echo "<script>alert('Erro ao excluir a conta. Tente novamente.');</script>";
+            }
+        }
     ?>
 
     <div class="container">
@@ -60,8 +79,8 @@
                         <p id="nav-subtitles">Telefone</p>
                         <p id="nav-txt"><?php echo htmlspecialchars($usuario['telUsuario']); ?></p>
                         <div id="nav-button">
-                            <button type="submit" class="red-button" id="excluirDados">Excluir conta</button>
-                            <button type="submit" class="green-button" id="altDados">Alterar dados</button>
+                            <button type="button" class="red-button" id="excluirDados">Excluir conta</button>
+                            <button type="button" class="green-button" id="altDados">Alterar dados</button>
                         </div>
                     </div>
                 </div>
