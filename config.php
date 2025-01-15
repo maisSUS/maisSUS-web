@@ -46,14 +46,14 @@ $password = 'usbw'; // Senha do banco de dados
 
 try {
     // Criar a conexão usando PDO
-    $conn = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8mb4", $username, $password,[
+    $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8mb4", $username, $password, [
         PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8mb4"
     ]);
 
     // Configurar o PDO para lançar exceções em caso de erro
-    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-    echo "Conexão bem-sucedida!";
+    // echo "Conexão bem-sucedida!"; // Você pode remover isso para evitar exibir mensagens de sucesso no frontend
 } catch (PDOException $e) {
     // Tratar erros de conexão
     echo "Erro ao conectar: " . $e->getMessage();

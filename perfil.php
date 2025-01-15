@@ -2,62 +2,68 @@
 <html lang="pt-br">
 
 <head>
-    <!-- Definição da codificação de caracteres e escala inicial -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- Título da página e ícone na barra de título -->
     <title>Perfil</title>
     <link rel="icon" href="img/serra.png">
-
-    <!-- Referências aos arquivos de estilos CSS -->
     <link rel="stylesheet" href="css/navBar.css">
     <link rel="stylesheet" href="css/perfil.css">
-
-    <!-- Biblioteca de ícones FontAwesome -->
     <link rel="stylesheet" href="https://kit.fontawesome.com/367278d2a4.css" crossorigin="anonymous">
 </head>
 
 <body>
     <?php
-        include 'header.php';
-        include 'config.php';
+        include 'header.php'; // Inclui o cabeçalho
+        include 'config.php';  // Inclui a configuração de conexão com o banco de dados
 
-        
+        // Verifique se o usuário está logado e se o nome do usuário está na sessão
+        session_start();
+        if (!isset($_SESSION['usuario'])) {
+            header('Location: login.php'); // Redireciona para a página de login caso o usuário não esteja logado
+            exit();
+        }
+
+        // Obtenha o nome do usuário da sessão
+        $nomeUsuario = $_SESSION['usuario'];
+
+        // Consulta para pegar os dados do usuário com base no nome
+        $sql = "SELECT * FROM LOGIN_USUARIO WHERE nomeUsuario = :usuario";
+        $stmt = $pdo->prepare($sql);
+        $stmt->bindParam(':usuario', $nomeUsuario, PDO::PARAM_STR);
+        $stmt->execute();
+        $usuario = $stmt->fetch(PDO::FETCH_ASSOC); // Obtém os dados do usuário
+
+        // Verifique se o usuário existe
+        if (!$usuario) {
+            echo "Usuário não encontrado.";
+            exit();
+        }
     ?>
 
-    <!-- Container principal -->
     <div class="container">
-
-        <!-- Lado direito do container -->
         <div id="nav-r">
             <h1 id="h10">Perfil</h1>
-            <!-- Conteúdo do perfil -->
             <div class="content">
-                <!-- Título "Dados Pessoais" -->
                 <h1 id="h11">Dados Pessoais</h1>
-
-                <!-- Dados pessoais -->
                 <div class="data">
                     <div class="data-left">
                         <p id="nav-subtitles">Nome Completo</p>
-                        <p id="nav-txt">Francisco Veiga Santos</p>
-                        <p id="nav-subtitles" class="cpf">cpf</p>
-                        <p id="nav-txt">160.616.570-48</p>
+                        <p id="nav-txt"><?php echo htmlspecialchars($usuario['nomeUsuario']); ?></p>
+                        <p id="nav-subtitles" class="cpf">CPF</p>
+                        <p id="nav-txt"><?php echo htmlspecialchars($usuario['cpfUsuario']); ?></p>
                         <p id="nav-subtitles">Cartão Nacional de Saúde</p>
-                        <p id="nav-txt">754891263781234</p>
+                        <p id="nav-txt"><?php echo htmlspecialchars($usuario['cartaoSus']); ?></p>
                     </div>
                     <div class="data-right">
                         <p id="nav-subtitles">E-mail</p>
-                        <p id="nav-txt">eutentei@fuimlk.com</p>
+                        <p id="nav-txt"><?php echo htmlspecialchars($usuario['email']); ?></p>
                         <p id="nav-subtitles">Telefone</p>
-                        <p id="nav-txt">(27) 99123-4567</p>
+                        <p id="nav-txt"><?php echo htmlspecialchars($usuario['telUsuario']); ?></p>
                         <div id="nav-button">
                             <button type="submit" class="red-button" id="excluirDados">Excluir conta</button>
                             <button type="submit" class="green-button" id="altDados">Alterar dados</button>
                         </div>
                     </div>
-                    
                 </div>
             </div>
         </div>

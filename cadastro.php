@@ -34,7 +34,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $sql = "INSERT INTO LOGIN_USUARIO (cpfUsuario, cartaoSus, nomeUsuario, email, telUsuario, senha) 
                 VALUES (:cpf, :cartaoSus, :nome, :email, :telefone, :senha)";
     
-            $stmt = $conn->prepare($sql);
+            $stmt = $pdo->prepare($sql); // Alteração aqui, use $pdo
 
             // Bind dos parâmetros
             $stmt->bindParam(':cpf', $cpf);
@@ -58,6 +58,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 }
 ?>
+
 
 <!DOCTYPE html>
 <html lang="pt-br">

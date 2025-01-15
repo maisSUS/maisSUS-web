@@ -1,5 +1,5 @@
 <?php
-    include 'config.php';
+    include 'config.php'; // Certifique-se de incluir o arquivo config.php
     // Inicia a sessão
     session_start();
                             
@@ -13,7 +13,7 @@
 
             // Consulta o banco de dados para verificar se o CPF existe
             $sql = "SELECT * FROM LOGIN_USUARIO WHERE cpfUsuario = :cpf";
-            $stmt = $conn->prepare($sql);
+            $stmt = $pdo->prepare($sql); // Alteração aqui, use $pdo
             $stmt->bindParam(':cpf', $cpf);
             $stmt->execute();
             
@@ -33,6 +33,7 @@
         endif;
     }
 ?>
+
 
 
     
