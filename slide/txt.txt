@@ -1,0 +1,153 @@
+<?php
+// Incluindo o arquivo de configuração que contém a conexão com o banco de dados
+include('config.php');
+include('header.php');  // Incluindo o header.php para manter a estrutura
+
+session_start();
+
+// Verificar se o usuário está logado
+if (!isset($_SESSION['usuario'])) {
+    header("Location: index.php"); // Redireciona para a página de login se não estiver logado
+    exit;
+}
+
+$userId = $_SESSION['usuario']; // ID do usuário da sessão
+
+// Consultar agendamentos de consulta
+$sqlConsulta = "SELECT ac.dataConsulta, u.nomeUnidade, m.nomeMedico, e.dscEspecialidade, h.dscHorario 
+                FROM AGENDAMENTO_CONSULTA ac
+                JOIN UNIDADE u ON ac.FK_idUnidade = u.idUnidade
+                JOIN MEDICO m ON ac.FK_idMedico = m.idMedico
+                JOIN ESPECIALIDADE e ON ac.FK_idEspecialidade = e.idEspecialidade
+                JOIN HORARIO h ON ac.FK_idHorario = h.idHorario
+                WHERE ac.FK_idUsuario = :userId";
+
+// Consultar agendamentos de exame
+$sqlExame = "SELECT ae.dataExame, u.nomeUnidade, ex.nomeExame, h.dscHorario
+             FROM AGENDAMENTO_EXAME ae
+             JOIN UNIDADE u ON ae.FK_idUnidade = u.idUnidade
+             JOIN EXAME ex ON ae.FK_idExame = ex.idExame
+             JOIN HORARIO h ON ae.FK_idHorario = h.idHorario
+             WHERE ae.FK_idUsuario = :userId";
+
+try {
+    // Preparando as consultas para evitar SQL injection
+    $stmtConsulta = $pdo->prepare($sqlConsulta);
+    $stmtConsulta->bindParam(':userId', $userId, PDO::PARAM_INT);
+    $stmtConsulta->execute();
+    
+    $stmtExame = $pdo->prepare($sqlExame);
+    $stmtExame->bindParam(':userId', $userId, PDO::PARAM_INT);
+    $stmtExame->execute();
+} catch (PDOException $e) {
+    echo "Erro ao executar as consultas: " . $e->getMessage();
+    exit;
+}
+?>
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meus Agendamentos</title>
+    <link rel="icon" href="img/serra.png">
+    <link rel="stylesheet" href="css/navBar.css">
+    <link rel="stylesheet" href="css/meusAgendamentos.css">
+    <link rel="stylesheet" href="css/cancelamento.css">
+    <link rel='stylesheet' href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css'>
+    <script src="js/cancelarConsulta.js" defer></script>
+    <script src="js/btnAcoes.js" defer></script>
+</head>
+<body>
+    <section>
+
+        <!-- Seta para voltar -->
+        <i class='bx bx-arrow-back' id="setaagd" onclick="Principal()"><p id="pSeta">Meus agendamentos</p></i>
+
+        <!-- titulo -->
+        <h1>Consulte ou cancele seus agendamentos</h1>
+
+        <!-- Agendamentos de Consultas -->
+        <section class="agendamentos">
+            <div class="ag1">
+                <div class="linha-1">
+                    <h2>Consultas</h2>
+                    <i id="pSeta" class="fa fa-chevron-down"></i>
+                </div>
+                <div class="lista" id="setaagd">
+                    <table id="tabelaConsultas" border="1">
+                        <tr>
+                            <th>Data da Consulta</th>
+                            <th>Unidade</th>
+                            <th>Médico</th>
+                            <th>Especialidade</th>
+                            <th>Horário</th>
+                        </tr>
+                        <?php if ($stmtConsulta->rowCount() > 0): ?>
+                            <?php while($row = $stmtConsulta->fetch(PDO::FETCH_ASSOC)): ?>
+                                <tr>
+                                    <td><?php echo $row['dataConsulta']; ?></td>
+                                    <td><?php echo $row['nomeUnidade']; ?></td>
+                                    <td><?php echo $row['nomeMedico']; ?></td>
+                                    <td><?php echo $row['dscEspecialidade']; ?></td>
+                                    <td><?php echo $row['dscHorario']; ?></td>
+                                </tr>
+                            <?php endwhile; ?>
+                        <?php else: ?>
+                            <tr>
+                                <td colspan="5">Você não tem agendamentos de consulta.</td>
+                            </tr>
+                        <?php endif; ?>
+                    </table>
+                    <button class="btnVerMais"><a href="#">Ver mais</a></button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Agendamentos de Exames -->
+        <section class="agendamentos">
+            <div class="ag1">
+                <div class="linha-1">
+                    <h2>Exames</h2>
+                    <i id="pSeta" class="fa fa-chevron-down"></i>
+                </div>
+                <div class="lista" id="setaagd">
+                    <table id="tabelaExames" border="1">
+                        <tr>
+                            <th>Data do Exame</th>
+                            <th>Unidade</th>
+                            <th>Exame</th>
+                            <th>Horário</th>
+                        </tr>
+                        <?php if ($stmtExame->rowCount() > 0): ?>
+                            <?php while($row = $stmtExame->fetch(PDO::FETCH_ASSOC)): ?>
+                                <tr>
+                                    <td><?php echo $row['dataExame']; ?></td>
+                                    <td><?php echo $row['nomeUnidade']; ?></td>
+                                    <td><?php echo $row['nomeExame']; ?></td>
+                                    <td><?php echo $row['dscHorario']; ?></td>
+                                </tr>
+                            <?php endwhile; ?>
+                        <?php else: ?>
+                            <tr>
+                                <td colspan="4">Você não tem agendamentos de exame.</td>
+                            </tr>
+                        <?php endif; ?>
+                    </table>
+                    <button class="btnVerMais"><a href="#">Ver mais</a></button>
+                </div>
+            </div>
+        </section>
+
+    </section>
+
+</body>
+</html>
+
+<?php
+// Fechando a conexão com o banco de dados
+$pdo = null;
+?>
+
+

@@ -45,7 +45,7 @@ $username = 'root'; // Usuário do banco de dados
 $password = 'usbw'; // Senha do banco de dados
 
 try {
-    // Criar a conexão usando PDO
+    // Criar a conexão usando PDOa
     $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8mb4", $username, $password, [
         PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8mb4"
     ]);
